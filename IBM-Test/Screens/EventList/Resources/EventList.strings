@@ -1,0 +1,9 @@
+/* 
+  EventList.strings
+  IBM-Test
+
+  Created by Gustavo Ludtke on 05/08/20.
+  Copyright © 2020 IBM. All rights reserved.
+*/
+
+"event_list" = "Lista de eventos";
