@@ -1,0 +1,6 @@
+framework module Pods_IBM_TestTests {
+  umbrella header "Pods-IBM-TestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
