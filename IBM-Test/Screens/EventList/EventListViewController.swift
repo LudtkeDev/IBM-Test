@@ -34,7 +34,10 @@ final class EventListViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.register(EventTableViewCell.self, forCellReuseIdentifier: EventTableViewCell.identifier)
+        let identifier = EventTableViewCell.identifier
+        let nib = UINib.init(nibName: identifier, bundle: nil)
+        
+        tableView.register(nib, forCellReuseIdentifier: identifier)
         tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
@@ -73,6 +76,7 @@ extension EventListViewController: UITableViewDataSource {
         }
         
         cell.setState(state)
+        cell.selectionStyle = .none
     
         return cell
     }

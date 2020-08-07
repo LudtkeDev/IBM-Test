@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class EventTableViewCell: UITableViewCell {
     
     // MARK: - Components
     @IBOutlet private weak var mainImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var participantsIcon: UIImageView!
+    @IBOutlet private weak var participantsLabel: UILabel!
     
     // MARK: - Proprieties
     static let identifier = "EventTableViewCell"
@@ -26,26 +30,33 @@ final class EventTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        // TODO: Clear data
+        mainImageView.image = nil
+        titleLabel.attributedText = nil
+        participantsLabel.attributedText = nil
     }
     
     // MARK: - Setup
     private func setup() {
-        setupImage()
+        setupImages()
         setupLabels()
     }
     
-    private func setupImage() {
-        mainImageView.layer.cornerRadius = 4
+    private func setupImages() {
+        mainImageView.layer.cornerRadius = 10
+        mainImageView.contentMode = .scaleAspectFill
+        mainImageView.backgroundColor = .lightGray
     }
     
     private func setupLabels() {
-        // TODO: Implement
+        titleLabel.numberOfLines = 0
+        participantsLabel.numberOfLines = 1
     }
     
     // MARK: - Functions
     func setState(_ state: State) {
-        // TODO: Set state
+        mainImageView.sd_setImage(with: state.imageURL)
+        titleLabel.attributedText = state.title
+        participantsLabel.attributedText = state.participants
     }
 }
 
