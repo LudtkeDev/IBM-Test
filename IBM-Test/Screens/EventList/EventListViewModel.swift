@@ -6,6 +6,22 @@
 //  Copyright © 2020 IBM. All rights reserved.
 //
 
-final class EventListViewModel {
+import RxRelay
+
+final class EventListViewModel: EventListViewModelIO {
+    // MARK: - Properties
+    private let router: EventListRouter
+    private let service: EventListService
+    private var state: BehaviorRelay<EventListViewState?> = .init(value: nil)
+    private(set) lazy var observableState = state.asObservable()
     
+    init(router: EventListRouter, service: EventListService) {
+        self.router = router
+        self.service = service
+    }
+    
+    // MARK: - Functions
+    func loadData() {
+        // TODO: Call service and handle data
+    }
 }

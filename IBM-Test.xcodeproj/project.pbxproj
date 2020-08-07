@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A403A88BC73ACA4209C7BAF6 /* Pods_IBM_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D62511304D21CEECFD67F9E /* Pods_IBM_TestTests.framework */; };
 		C74B3F2F24DA545100B11AED /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F2D24DA545100B11AED /* EventListViewController.swift */; };
 		C74B3F3224DA546100B11AED /* EventListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F3124DA546100B11AED /* EventListModel.swift */; };
-		C74B3F3424DA547700B11AED /* EventListNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F3324DA547700B11AED /* EventListNetworking.swift */; };
+		C74B3F3424DA547700B11AED /* EventListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F3324DA547700B11AED /* EventListService.swift */; };
 		C74B3F3624DA548B00B11AED /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F3524DA548B00B11AED /* EventListViewModel.swift */; };
 		C74B3F3A24DA5B1F00B11AED /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F3824DA5B1F00B11AED /* EventTableViewCell.swift */; };
 		C74B3F3B24DA5B1F00B11AED /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C74B3F3924DA5B1F00B11AED /* EventTableViewCell.xib */; };
@@ -18,6 +18,9 @@
 		C74B3F4224DA666C00B11AED /* EventListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74B3F4124DA666C00B11AED /* EventListViewController.storyboard */; };
 		C74B3F4424DA689900B11AED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F4324DA689800B11AED /* SceneDelegate.swift */; };
 		C74B3F4724DA68A800B11AED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74B3F4524DA68A800B11AED /* Main.storyboard */; };
+		C770775024DCCF92007C2A11 /* EventListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770774F24DCCF92007C2A11 /* EventListViewState.swift */; };
+		C770775224DCD9A0007C2A11 /* EventListDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770775124DCD9A0007C2A11 /* EventListDefinitions.swift */; };
+		C770775424DCDA4C007C2A11 /* EventListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770775324DCDA4C007C2A11 /* EventListRouter.swift */; };
 		C7C0E31D24DA530100C34633 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0E31C24DA530100C34633 /* AppDelegate.swift */; };
 		C7C0E32624DA530200C34633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C0E32524DA530200C34633 /* Assets.xcassets */; };
 		C7C0E32924DA530200C34633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C0E32724DA530200C34633 /* LaunchScreen.storyboard */; };
@@ -43,7 +46,7 @@
 		BAA0705EF39BFE4ED47661F0 /* Pods_IBM_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBM_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74B3F2D24DA545100B11AED /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		C74B3F3124DA546100B11AED /* EventListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListModel.swift; sourceTree = "<group>"; };
-		C74B3F3324DA547700B11AED /* EventListNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListNetworking.swift; sourceTree = "<group>"; };
+		C74B3F3324DA547700B11AED /* EventListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListService.swift; sourceTree = "<group>"; };
 		C74B3F3524DA548B00B11AED /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		C74B3F3824DA5B1F00B11AED /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		C74B3F3924DA5B1F00B11AED /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		C74B3F4124DA666C00B11AED /* EventListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventListViewController.storyboard; sourceTree = "<group>"; };
 		C74B3F4324DA689800B11AED /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C74B3F4624DA68A800B11AED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C770774F24DCCF92007C2A11 /* EventListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewState.swift; sourceTree = "<group>"; };
+		C770775124DCD9A0007C2A11 /* EventListDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListDefinitions.swift; sourceTree = "<group>"; };
+		C770775324DCDA4C007C2A11 /* EventListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListRouter.swift; sourceTree = "<group>"; };
 		C7C0E31924DA530100C34633 /* IBM-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IBM-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C0E31C24DA530100C34633 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7C0E32524DA530200C34633 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,7 +105,6 @@
 				47DF3000AFCA080A8C443E44 /* Pods-IBM-TestTests.debug.xcconfig */,
 				90CED1551ACB98983B3934B5 /* Pods-IBM-TestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -114,10 +119,13 @@
 		C74B3F2C24DA543C00B11AED /* EventList */ = {
 			isa = PBXGroup;
 			children = (
-				C74B3F3524DA548B00B11AED /* EventListViewModel.swift */,
 				C74B3F3124DA546100B11AED /* EventListModel.swift */,
-				C74B3F3324DA547700B11AED /* EventListNetworking.swift */,
+				C74B3F3524DA548B00B11AED /* EventListViewModel.swift */,
 				C74B3F2D24DA545100B11AED /* EventListViewController.swift */,
+				C770774F24DCCF92007C2A11 /* EventListViewState.swift */,
+				C74B3F3324DA547700B11AED /* EventListService.swift */,
+				C770775124DCD9A0007C2A11 /* EventListDefinitions.swift */,
+				C770775324DCDA4C007C2A11 /* EventListRouter.swift */,
 				C74B3F4124DA666C00B11AED /* EventListViewController.storyboard */,
 				C74B3F3724DA582900B11AED /* Components */,
 				C74B3F3C24DA62AA00B11AED /* Resources */,
@@ -366,10 +374,13 @@
 			files = (
 				C74B3F2F24DA545100B11AED /* EventListViewController.swift in Sources */,
 				C74B3F4424DA689900B11AED /* SceneDelegate.swift in Sources */,
+				C770775224DCD9A0007C2A11 /* EventListDefinitions.swift in Sources */,
 				C7C0E31D24DA530100C34633 /* AppDelegate.swift in Sources */,
 				C74B3F3224DA546100B11AED /* EventListModel.swift in Sources */,
+				C770775424DCDA4C007C2A11 /* EventListRouter.swift in Sources */,
 				C74B3F3A24DA5B1F00B11AED /* EventTableViewCell.swift in Sources */,
-				C74B3F3424DA547700B11AED /* EventListNetworking.swift in Sources */,
+				C74B3F3424DA547700B11AED /* EventListService.swift in Sources */,
+				C770775024DCCF92007C2A11 /* EventListViewState.swift in Sources */,
 				C74B3F3624DA548B00B11AED /* EventListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
