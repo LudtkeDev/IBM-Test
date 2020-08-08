@@ -16,9 +16,10 @@ final class EventListFactory {
         let storyboard = R.storyboard.eventListViewController()
         let identifier = "EventListViewController"
         let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? EventListViewController
+        let navigationController = UINavigationController(rootViewController: viewController ?? UIViewController())
         
         viewController?.viewModel = viewModel
         
-        return viewController ?? UIViewController()
+        return navigationController
     }
 }

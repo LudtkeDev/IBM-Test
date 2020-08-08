@@ -23,7 +23,10 @@
 		C770775A24DCE54D007C2A11 /* EventListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770775924DCE54D007C2A11 /* EventListFactory.swift */; };
 		C770776424DCF0F6007C2A11 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770776324DCF0F6007C2A11 /* Endpoint.swift */; };
 		C770776724DCF619007C2A11 /* ServerAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770776624DCF619007C2A11 /* ServerAPIError.swift */; };
-		C775A54324DD81E9004D0E21 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775A54224DD81E9004D0E21 /* R.generated.swift */; };
+		C7961B5524DE30E300D6DAEE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7961B5424DE30E300D6DAEE /* R.generated.swift */; };
+		C7961B5824DE31C100D6DAEE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7961B5724DE31C100D6DAEE /* ErrorView.swift */; };
+		C7961B5A24DE329800D6DAEE /* General.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7961B5924DE329800D6DAEE /* General.strings */; };
+		C7961B5C24DE345800D6DAEE /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7961B5B24DE345800D6DAEE /* ErrorView.xib */; };
 		C7C0E31D24DA530100C34633 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C0E31C24DA530100C34633 /* AppDelegate.swift */; };
 		C7C0E32624DA530200C34633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C0E32524DA530200C34633 /* Assets.xcassets */; };
 		C7C0E32924DA530200C34633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C0E32724DA530200C34633 /* LaunchScreen.storyboard */; };
@@ -62,7 +65,10 @@
 		C770775924DCE54D007C2A11 /* EventListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListFactory.swift; sourceTree = "<group>"; };
 		C770776324DCF0F6007C2A11 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = ../../../../../../../../../../Documents/Endpoint.swift; sourceTree = "<group>"; };
 		C770776624DCF619007C2A11 /* ServerAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServerAPIError.swift; path = ../../../../../../../../../../Documents/ServerAPIError.swift; sourceTree = "<group>"; };
-		C775A54224DD81E9004D0E21 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		C7961B5424DE30E300D6DAEE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		C7961B5724DE31C100D6DAEE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		C7961B5924DE329800D6DAEE /* General.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = General.strings; sourceTree = "<group>"; };
+		C7961B5B24DE345800D6DAEE /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		C7C0E31924DA530100C34633 /* IBM-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IBM-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C0E31C24DA530100C34633 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7C0E32524DA530200C34633 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 		C770776124DCF0E0007C2A11 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C7961B5624DE31AE00D6DAEE /* ErrorView */,
 				C770776524DCF609007C2A11 /* ServerAPIError */,
 				C770776224DCF0E9007C2A11 /* Endpoint */,
 			);
@@ -193,19 +200,20 @@
 		C775A54024DD81A9004D0E21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C775A54124DD81B4004D0E21 /* Generated */,
 				C7C0E32524DA530200C34633 /* Assets.xcassets */,
 				C7C0E32724DA530200C34633 /* LaunchScreen.storyboard */,
+				C7961B5924DE329800D6DAEE /* General.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C775A54124DD81B4004D0E21 /* Generated */ = {
+		C7961B5624DE31AE00D6DAEE /* ErrorView */ = {
 			isa = PBXGroup;
 			children = (
-				C775A54224DD81E9004D0E21 /* R.generated.swift */,
+				C7961B5724DE31C100D6DAEE /* ErrorView.swift */,
+				C7961B5B24DE345800D6DAEE /* ErrorView.xib */,
 			);
-			path = Generated;
+			path = ErrorView;
 			sourceTree = "<group>";
 		};
 		C7C0E31024DA530100C34633 = {
@@ -235,6 +243,7 @@
 				C74B3F2B24DA542900B11AED /* Screens */,
 				C770776124DCF0E0007C2A11 /* Helpers */,
 				C7C0E31C24DA530100C34633 /* AppDelegate.swift */,
+				C7961B5424DE30E300D6DAEE /* R.generated.swift */,
 				C74B3F4324DA689800B11AED /* SceneDelegate.swift */,
 				C7C0E32A24DA530200C34633 /* Info.plist */,
 			);
@@ -338,6 +347,8 @@
 				C74B3F3B24DA5B1F00B11AED /* EventTableViewCell.xib in Resources */,
 				C74B3F4224DA666C00B11AED /* EventListViewController.storyboard in Resources */,
 				C74B3F3F24DA62E600B11AED /* EventList.strings in Resources */,
+				C7961B5A24DE329800D6DAEE /* General.strings in Resources */,
+				C7961B5C24DE345800D6DAEE /* ErrorView.xib in Resources */,
 				C7C0E32924DA530200C34633 /* LaunchScreen.storyboard in Resources */,
 				C7C0E32624DA530200C34633 /* Assets.xcassets in Resources */,
 			);
@@ -442,7 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C74B3F2F24DA545100B11AED /* EventListViewController.swift in Sources */,
-				C775A54324DD81E9004D0E21 /* R.generated.swift in Sources */,
+				C7961B5524DE30E300D6DAEE /* R.generated.swift in Sources */,
 				C74B3F4424DA689900B11AED /* SceneDelegate.swift in Sources */,
 				C770775224DCD9A0007C2A11 /* EventListDefinitions.swift in Sources */,
 				C7C0E31D24DA530100C34633 /* AppDelegate.swift in Sources */,
@@ -451,6 +462,7 @@
 				C74B3F3A24DA5B1F00B11AED /* EventTableViewCell.swift in Sources */,
 				C74B3F3424DA547700B11AED /* EventListService.swift in Sources */,
 				C770775024DCCF92007C2A11 /* EventListViewState.swift in Sources */,
+				C7961B5824DE31C100D6DAEE /* ErrorView.swift in Sources */,
 				C74B3F3624DA548B00B11AED /* EventListViewModel.swift in Sources */,
 				C770776724DCF619007C2A11 /* ServerAPIError.swift in Sources */,
 				C770776424DCF0F6007C2A11 /* Endpoint.swift in Sources */,

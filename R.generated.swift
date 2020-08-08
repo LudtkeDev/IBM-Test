@@ -144,10 +144,20 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
+    /// Nib `ErrorView`.
+    static let errorView = _R.nib._ErrorView()
     /// Nib `EventTableViewCell`.
     static let eventTableViewCell = _R.nib._EventTableViewCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "ErrorView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.errorView) instead")
+    static func errorView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.errorView)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "EventTableViewCell", in: bundle)`
@@ -156,6 +166,10 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.eventTableViewCell)
     }
     #endif
+
+    static func errorView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ErrorView? {
+      return R.nib.errorView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ErrorView
+    }
 
     static func eventTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EventTableViewCell? {
       return R.nib.eventTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EventTableViewCell
@@ -172,24 +186,60 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
   struct string {
     /// This `R.string.eventList` struct is generated, and contains static references to 1 localization keys.
     struct eventList {
       /// Value: Lista de eventos
-      static let event_list = Rswift.StringResource(key: "event_list", tableName: "EventList", bundle: R.hostingBundle, locales: [], comment: nil)
+      static let eventList = Rswift.StringResource(key: "eventList", tableName: "EventList", bundle: R.hostingBundle, locales: [], comment: nil)
 
       /// Value: Lista de eventos
-      static func event_list(preferredLanguages: [String]? = nil) -> String {
+      static func eventList(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("event_list", tableName: "EventList", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("eventList", tableName: "EventList", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "EventList", preferredLanguages: preferredLanguages) else {
-          return "event_list"
+          return "eventList"
         }
 
-        return NSLocalizedString("event_list", tableName: "EventList", bundle: bundle, comment: "")
+        return NSLocalizedString("eventList", tableName: "EventList", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
+    /// This `R.string.general` struct is generated, and contains static references to 2 localization keys.
+    struct general {
+      /// Value: Ocorreu um erro ao carregar o conteúdo. Por favor, tente novamente.
+      static let requestError = Rswift.StringResource(key: "requestError", tableName: "General", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Tente novamente
+      static let tryAgain = Rswift.StringResource(key: "tryAgain", tableName: "General", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Ocorreu um erro ao carregar o conteúdo. Por favor, tente novamente.
+      static func requestError(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("requestError", tableName: "General", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "General", preferredLanguages: preferredLanguages) else {
+          return "requestError"
+        }
+
+        return NSLocalizedString("requestError", tableName: "General", bundle: bundle, comment: "")
+      }
+
+      /// Value: Tente novamente
+      static func tryAgain(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("tryAgain", tableName: "General", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "General", preferredLanguages: preferredLanguages) else {
+          return "tryAgain"
+        }
+
+        return NSLocalizedString("tryAgain", tableName: "General", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}
@@ -220,6 +270,17 @@ struct _R: Rswift.Validatable {
 
   #if os(iOS) || os(tvOS)
   struct nib {
+    struct _ErrorView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ErrorView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ErrorView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ErrorView
+      }
+
+      fileprivate init() {}
+    }
+
     struct _EventTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = EventTableViewCell
 

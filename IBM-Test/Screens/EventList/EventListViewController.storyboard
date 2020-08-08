@@ -19,17 +19,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="t1d-b8-cdD">
+                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="SxJ-2f-xRB" firstAttribute="trailing" secondItem="QvZ-cj-dFt" secondAttribute="trailing" id="IvS-Dc-wMR"/>
                             <constraint firstItem="SxJ-2f-xRB" firstAttribute="bottom" secondItem="QvZ-cj-dFt" secondAttribute="bottom" id="SCX-5F-Yrs"/>
+                            <constraint firstItem="t1d-b8-cdD" firstAttribute="centerX" secondItem="KEH-WW-8PZ" secondAttribute="centerX" id="Tmv-nY-Ogy"/>
                             <constraint firstItem="SxJ-2f-xRB" firstAttribute="leading" secondItem="QvZ-cj-dFt" secondAttribute="leading" id="iTt-Ag-9At"/>
+                            <constraint firstItem="t1d-b8-cdD" firstAttribute="centerY" secondItem="KEH-WW-8PZ" secondAttribute="centerY" id="rrB-74-TP4"/>
                             <constraint firstItem="SxJ-2f-xRB" firstAttribute="top" secondItem="QvZ-cj-dFt" secondAttribute="top" id="v3T-Ux-GBw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QvZ-cj-dFt"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="t1d-b8-cdD" id="jqp-ST-nPN"/>
                         <outlet property="tableView" destination="SxJ-2f-xRB" id="HTQ-Bq-pI1"/>
                     </connections>
                 </viewController>

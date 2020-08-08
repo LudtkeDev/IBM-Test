@@ -12,6 +12,14 @@ final class EventListViewController: UIViewController {
     
     // MARK: - Components
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    
+    private lazy var errorView: UIView = {
+        guard let view = R.nib.errorView(owner: nil) else { return UIView() }
+        view.setRetryButtonHandler(loadData)
+        
+        return view
+    }()
     
     // MARK: - Properties
     private lazy var state = viewModel.observableState.observeOn(MainScheduler.asyncInstance)
@@ -24,13 +32,14 @@ final class EventListViewController: UIViewController {
         super.viewDidLoad()
         
         setup()
-        DispatchQueue.global(qos: .utility).async { [weak self] in self?.viewModel.loadData() }
     }
     
     // MARK: - Setup
     private func setup() {
+        title = R.string.eventList.eventList()
         setupTableView()
         bind()
+        loadData()
     }
     
     private func setupTableView() {
@@ -51,14 +60,21 @@ final class EventListViewController: UIViewController {
     private func handleState(_ state: EventListViewState?) {
         guard let _state = state else { return }
         
+        tableView.isHidden = _state == .loading
+        tableView.backgroundView = _state == .failure ? errorView : nil
+        
         switch _state {
-        case .failure, .loading:
-            // TODO: Implement
-            print("Must implement")
+        case .failure: activityIndicator.stopAnimating()
+        case .loading: activityIndicator.startAnimating()
         case .loaded(let states):
             cellStates = states
             tableView.reloadData()
+            activityIndicator.stopAnimating()
         }
+    }
+    
+    private func loadData() {
+        DispatchQueue.global(qos: .utility).async { [weak self] in self?.viewModel.loadData() }
     }
 }
 
