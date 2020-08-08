@@ -14,7 +14,6 @@ struct EventDetailViewState: Equatable {
     let peopleNumber: NSAttributedString
     let price: NSAttributedString
     let date: NSAttributedString
-    let local: NSAttributedString
     let description: NSAttributedString
     let cuponsDiscount: [String]
 }

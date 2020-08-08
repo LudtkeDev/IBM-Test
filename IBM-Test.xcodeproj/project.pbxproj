@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A403A88BC73ACA4209C7BAF6 /* Pods_IBM_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D62511304D21CEECFD67F9E /* Pods_IBM_TestTests.framework */; };
+		C748CB2824DF3EA800559B95 /* EventDetail.strings in Resources */ = {isa = PBXBuildFile; fileRef = C748CB2724DF3EA800559B95 /* EventDetail.strings */; };
 		C74B3F2F24DA545100B11AED /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F2D24DA545100B11AED /* EventListViewController.swift */; };
 		C74B3F3424DA547700B11AED /* EventListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F3324DA547700B11AED /* EventListService.swift */; };
 		C74B3F3624DA548B00B11AED /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F3524DA548B00B11AED /* EventListViewModel.swift */; };
@@ -56,6 +57,7 @@
 		7D62511304D21CEECFD67F9E /* Pods_IBM_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBM_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90CED1551ACB98983B3934B5 /* Pods-IBM-TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBM-TestTests.release.xcconfig"; path = "Target Support Files/Pods-IBM-TestTests/Pods-IBM-TestTests.release.xcconfig"; sourceTree = "<group>"; };
 		BAA0705EF39BFE4ED47661F0 /* Pods_IBM_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBM_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C748CB2724DF3EA800559B95 /* EventDetail.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = EventDetail.strings; sourceTree = "<group>"; };
 		C74B3F2D24DA545100B11AED /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		C74B3F3324DA547700B11AED /* EventListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListService.swift; sourceTree = "<group>"; };
 		C74B3F3524DA548B00B11AED /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 				90CED1551ACB98983B3934B5 /* Pods-IBM-TestTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C748CB2624DF3E8200559B95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C748CB2724DF3EA800559B95 /* EventDetail.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C74B3F2B24DA542900B11AED /* Screens */ = {
@@ -228,6 +238,7 @@
 				C78A594024DE4B0700F8A823 /* EventDetailDefinitions.swift */,
 				C78A594424DE4BCA00F8A823 /* EventDetailFactory.swift */,
 				C78A594624DE4C2F00F8A823 /* EventDetailViewController.storyboard */,
+				C748CB2624DF3E8200559B95 /* Resources */,
 			);
 			path = EventDetail;
 			sourceTree = "<group>";
@@ -383,6 +394,7 @@
 				C74B3F3F24DA62E600B11AED /* EventList.strings in Resources */,
 				C7961B5A24DE329800D6DAEE /* General.strings in Resources */,
 				C7961B5C24DE345800D6DAEE /* ErrorView.xib in Resources */,
+				C748CB2824DF3EA800559B95 /* EventDetail.strings in Resources */,
 				C7C0E32924DA530200C34633 /* LaunchScreen.storyboard in Resources */,
 				C7C0E32624DA530200C34633 /* Assets.xcassets in Resources */,
 				C78A594724DE4C2F00F8A823 /* EventDetailViewController.storyboard in Resources */,

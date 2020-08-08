@@ -30,7 +30,7 @@ final class EventListViewModel: EventListViewModelIO {
         switch result {
         case .failure(let error):
             state.accept(.failure)
-            print("Error: \(error)")
+            print("Error to fetch events - \(error)") // Send to crashlytics
         case .success(let model):
             state.accept(makeState(with: model))
         }

@@ -29,6 +29,7 @@ final class EventDetailViewController: UIViewController {
     
     // MARK: - Properties
     private lazy var state = viewModel.observableState.observeOn(MainScheduler.asyncInstance)
+    private lazy var addressState = viewModel.observableAddress.observeOn(MainScheduler.asyncInstance)
     private let bag = DisposeBag()
     var viewModel: EventDetailViewModelIO!
     
@@ -51,12 +52,14 @@ final class EventDetailViewController: UIViewController {
     
     private func bind() {
         bag.insert(state.subscribe(onNext: { [weak self] in self?.handleState($0) }))
+        bag.insert(addressState.subscribe(onNext: { [weak self] in self?.handleAddress($0) }))
     }
     
     private func setupLabels() {
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
         descriptionLabel.numberOfLines = 0
+        locationLabel.numberOfLines = 0
     }
     
     private func setupImages() {
@@ -76,9 +79,12 @@ final class EventDetailViewController: UIViewController {
         peopleLabel.attributedText = _state.peopleNumber
         priceLabel.attributedText = _state.price
         dateLabel.attributedText = _state.date
-        locationLabel.attributedText = _state.local
         descriptionLabel.attributedText = _state.description
         
         // TODO: Setup cupons stack view
+    }
+    
+    private func handleAddress(_ address: NSAttributedString) {
+        locationLabel.attributedText = address
     }
 }

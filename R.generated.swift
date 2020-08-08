@@ -195,8 +195,46 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
+    /// This `R.string.eventDetail` struct is generated, and contains static references to 2 localization keys.
+    struct eventDetail {
+      /// Value: %@, %@
+      static let formattedAddress = Rswift.StringResource(key: "formattedAddress", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Endereço não encontrado.
+      static let addressNotFound = Rswift.StringResource(key: "addressNotFound", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: %@, %@
+      static func formattedAddress(_ value1: String, _ value2: String, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("formattedAddress", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1, value2)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "formattedAddress"
+        }
+
+        let format = NSLocalizedString("formattedAddress", tableName: "EventDetail", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1, value2)
+      }
+
+      /// Value: Endereço não encontrado.
+      static func addressNotFound(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("addressNotFound", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "addressNotFound"
+        }
+
+        return NSLocalizedString("addressNotFound", tableName: "EventDetail", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
     /// This `R.string.eventList` struct is generated, and contains static references to 1 localization keys.
     struct eventList {
       /// Value: Lista de eventos

@@ -16,4 +16,5 @@ protocol EventDetailViewModelInput {
 
 protocol EventDetailViewModelOutput {
     var observableState: Observable<EventDetailViewState?> { get }
+    var observableAddress: Observable<NSAttributedString> { get }
 }
