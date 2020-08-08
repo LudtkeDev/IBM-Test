@@ -12,12 +12,9 @@ typealias EventListViewModelIO = EventListViewModelInput & EventListViewModelOut
 
 protocol EventListViewModelInput {
     func loadData()
+    var events: [EventModel] { get }
 }
 
 protocol EventListViewModelOutput {
     var observableState: Observable<EventListViewState?> { get }
-}
-
-protocol EventListRouting {
-    func navigateToEventDetail()
 }

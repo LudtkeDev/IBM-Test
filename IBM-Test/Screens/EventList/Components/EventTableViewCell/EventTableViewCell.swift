@@ -62,6 +62,7 @@ final class EventTableViewCell: UITableViewCell {
 
 extension EventTableViewCell {
     struct State: Equatable {
+        let id: String
         let imageURL: URL?
         let title: NSAttributedString
         let participants: NSAttributedString
@@ -69,7 +70,8 @@ extension EventTableViewCell {
         static func == (lhs: State, rhs: State) -> Bool {
             return lhs.imageURL == rhs.imageURL &&
                 lhs.title == rhs.title &&
-                lhs.participants == rhs.participants
+                lhs.participants == rhs.participants &&
+                lhs.id == rhs.id
         }
     }
 }

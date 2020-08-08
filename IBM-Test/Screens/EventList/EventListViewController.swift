@@ -25,7 +25,7 @@ final class EventListViewController: UIViewController {
     private lazy var state = viewModel.observableState.observeOn(MainScheduler.asyncInstance)
     private var cellStates: [EventTableViewCell.State] = []
     private let bag = DisposeBag()
-    var viewModel: EventListViewModel!
+    var viewModel: EventListViewModelIO!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -98,4 +98,9 @@ extension EventListViewController: UITableViewDataSource {
     }
 }
 
-extension EventListViewController: UITableViewDelegate { }
+extension EventListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let eventDetailVC = EventDetailFactory.buildScreen(event: viewModel.events[indexPath.row])
+        navigationController?.pushViewController(eventDetailVC, animated: true)
+    }
+}

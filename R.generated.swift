@@ -89,12 +89,21 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
+    /// Storyboard `EventDetailViewController`.
+    static let eventDetailViewController = _R.storyboard.eventDetailViewController()
     /// Storyboard `EventListViewController`.
     static let eventListViewController = _R.storyboard.eventListViewController()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "EventDetailViewController", bundle: ...)`
+    static func eventDetailViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.eventDetailViewController)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "EventListViewController", bundle: ...)`
@@ -303,12 +312,35 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
+      try eventDetailViewController.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try eventListViewController.validate()
       #endif
       #if os(iOS) || os(tvOS)
       try launchScreen.validate()
       #endif
     }
+
+    #if os(iOS) || os(tvOS)
+    struct eventDetailViewController: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let eventDetailViewController = StoryboardViewControllerResource<EventDetailViewController>(identifier: "EventDetailViewController")
+      let name = "EventDetailViewController"
+
+      func eventDetailViewController(_: Void = ()) -> EventDetailViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: eventDetailViewController)
+      }
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+        if _R.storyboard.eventDetailViewController().eventDetailViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventDetailViewController' could not be loaded from storyboard 'EventDetailViewController' as 'EventDetailViewController'.") }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     struct eventListViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
