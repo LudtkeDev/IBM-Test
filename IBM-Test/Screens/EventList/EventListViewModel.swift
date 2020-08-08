@@ -10,14 +10,13 @@ import RxRelay
 
 final class EventListViewModel: EventListViewModelIO {
     // MARK: - Properties
-    private let router: EventListRouter
+    var events: [EventModel] = []
     private let service: EventListService
     private var state: BehaviorRelay<EventListViewState?> = .init(value: nil)
     private(set) lazy var observableState = state.asObservable()
     
     // MARK: Lifecycle
-    init(router: EventListRouter, service: EventListService) {
-        self.router = router
+    init(service: EventListService) {
         self.service = service
     }
     
@@ -27,24 +26,28 @@ final class EventListViewModel: EventListViewModelIO {
         service.fetchEvents(completion: handleFetchEvents)
     }
     
-    private func handleFetchEvents(_ result: Swift.Result<[EventListModel.Event], Error>) {
+    private func handleFetchEvents(_ result: Swift.Result<[EventModel], Error>) {
         switch result {
         case .failure(let error):
             state.accept(.failure)
-            print("Error: \(error)")
+            print("Error to fetch events - \(error)") // Send to crashlytics
         case .success(let model):
             state.accept(makeState(with: model))
         }
     }
     
-    private func makeState(with events: [EventListModel.Event]) -> EventListViewState {
+    private func makeState(with events: [EventModel]) -> EventListViewState {
         let states: [EventTableViewCell.State] = events.map({ mapEvent($0) })
+        
+        self.events = events
+        
         return .loaded(states: states)
     }
     
-    private func mapEvent(_ event: EventListModel.Event) -> EventTableViewCell.State {
+    private func mapEvent(_ event: EventModel) -> EventTableViewCell.State {
         // TODO: Apply font and color
-        return .init(imageURL: URL(string: event.image),
+        return .init(id: event.id,
+                     imageURL: URL(string: event.image),
                      title: NSAttributedString(string: event.title),
                      participants: NSAttributedString(string: String(event.people.count)))
     }

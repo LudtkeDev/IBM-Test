@@ -89,12 +89,21 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
+    /// Storyboard `EventDetailViewController`.
+    static let eventDetailViewController = _R.storyboard.eventDetailViewController()
     /// Storyboard `EventListViewController`.
     static let eventListViewController = _R.storyboard.eventListViewController()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "EventDetailViewController", bundle: ...)`
+    static func eventDetailViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.eventDetailViewController)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "EventListViewController", bundle: ...)`
@@ -144,12 +153,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
+    /// Nib `CuponView`.
+    static let cuponView = _R.nib._CuponView()
     /// Nib `ErrorView`.
     static let errorView = _R.nib._ErrorView()
     /// Nib `EventTableViewCell`.
     static let eventTableViewCell = _R.nib._EventTableViewCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "CuponView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.cuponView) instead")
+    static func cuponView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.cuponView)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "ErrorView", in: bundle)`
@@ -166,6 +185,10 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.eventTableViewCell)
     }
     #endif
+
+    static func cuponView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CuponView? {
+      return R.nib.cuponView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CuponView
+    }
 
     static func errorView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ErrorView? {
       return R.nib.errorView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ErrorView
@@ -186,8 +209,63 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
+    /// This `R.string.eventDetail` struct is generated, and contains static references to 3 localization keys.
+    struct eventDetail {
+      /// Value: %@, %@
+      static let formattedAddress = Rswift.StringResource(key: "formattedAddress", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Cupom de R$: %@
+      static let discount = Rswift.StringResource(key: "discount", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Endereço não encontrado.
+      static let addressNotFound = Rswift.StringResource(key: "addressNotFound", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: %@, %@
+      static func formattedAddress(_ value1: String, _ value2: String, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("formattedAddress", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1, value2)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "formattedAddress"
+        }
+
+        let format = NSLocalizedString("formattedAddress", tableName: "EventDetail", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1, value2)
+      }
+
+      /// Value: Cupom de R$: %@
+      static func discount(_ value1: String, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("discount", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "discount"
+        }
+
+        let format = NSLocalizedString("discount", tableName: "EventDetail", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1)
+      }
+
+      /// Value: Endereço não encontrado.
+      static func addressNotFound(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("addressNotFound", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "addressNotFound"
+        }
+
+        return NSLocalizedString("addressNotFound", tableName: "EventDetail", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
     /// This `R.string.eventList` struct is generated, and contains static references to 1 localization keys.
     struct eventList {
       /// Value: Lista de eventos
@@ -270,6 +348,17 @@ struct _R: Rswift.Validatable {
 
   #if os(iOS) || os(tvOS)
   struct nib {
+    struct _CuponView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CuponView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CuponView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CuponView
+      }
+
+      fileprivate init() {}
+    }
+
     struct _ErrorView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "ErrorView"
@@ -303,12 +392,35 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
+      try eventDetailViewController.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try eventListViewController.validate()
       #endif
       #if os(iOS) || os(tvOS)
       try launchScreen.validate()
       #endif
     }
+
+    #if os(iOS) || os(tvOS)
+    struct eventDetailViewController: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let eventDetailViewController = StoryboardViewControllerResource<EventDetailViewController>(identifier: "EventDetailViewController")
+      let name = "EventDetailViewController"
+
+      func eventDetailViewController(_: Void = ()) -> EventDetailViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: eventDetailViewController)
+      }
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+        if _R.storyboard.eventDetailViewController().eventDetailViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'eventDetailViewController' could not be loaded from storyboard 'EventDetailViewController' as 'EventDetailViewController'.") }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     struct eventListViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {

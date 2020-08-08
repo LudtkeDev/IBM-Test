@@ -9,7 +9,7 @@
 import Alamofire
 
 final class EventListService {
-    func fetchEvents(completion: @escaping (Swift.Result<[EventListModel.Event], Error>) -> Void) {
+    func fetchEvents(completion: @escaping (Swift.Result<[EventModel], Error>) -> Void) {
         AF.request(Endpoint.fetchEvents.url, method: .get).responseJSON { response in
             
             switch response.result {
@@ -20,7 +20,7 @@ final class EventListService {
                 }
 
                 do {
-                    let events = try JSONDecoder().decode([EventListModel.Event].self, from: jsonData)
+                    let events = try JSONDecoder().decode([EventModel].self, from: jsonData)
                     completion(.success(events))
                 } catch let error {
                     completion(.failure(error))
