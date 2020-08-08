@@ -13,8 +13,8 @@ final class EventListFactory {
         let router = EventListRouter()
         let service = EventListService()
         let viewModel = EventListViewModel(router: router, service: service)
+        let storyboard = R.storyboard.eventListViewController()
         let identifier = "EventListViewController"
-        let storyboard = UIStoryboard(name: identifier, bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? EventListViewController
         
         viewController?.viewModel = viewModel

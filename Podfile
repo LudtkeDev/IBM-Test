@@ -7,6 +7,7 @@ target 'IBM-Test' do
   pod 'RxCocoa', '~> 5.0'
   pod 'Alamofire', '~> 5.2'
   pod 'SDWebImage', '~> 5.0'
+  pod 'R.swift'
 
   target 'IBM-TestTests' do
     inherit! :search_paths
