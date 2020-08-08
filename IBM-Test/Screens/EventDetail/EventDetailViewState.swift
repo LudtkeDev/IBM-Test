@@ -6,6 +6,15 @@
 //  Copyright © 2020 IBM. All rights reserved.
 //
 
+import Foundation
+
 struct EventDetailViewState: Equatable {
-    // TODO: Implement
+    let imageURL: URL?
+    let name: NSAttributedString
+    let peopleNumber: NSAttributedString
+    let price: NSAttributedString
+    let date: NSAttributedString
+    let local: NSAttributedString
+    let description: NSAttributedString
+    let cuponsDiscount: [String]
 }

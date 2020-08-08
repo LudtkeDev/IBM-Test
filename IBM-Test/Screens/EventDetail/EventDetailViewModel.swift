@@ -16,6 +16,8 @@ final class EventDetailViewModel: EventDetailViewModelIO {
     private(set) lazy var observableState = state.asObservable()
     
     // MARK: - Lifecycle
+    // Here we receive the model that we had already requested on the previous screen,
+    // avoiding an unnecessary loading
     init(service: EventDetailService, event: EventModel) {
         self.service = service
         self.event = event
@@ -23,6 +25,28 @@ final class EventDetailViewModel: EventDetailViewModelIO {
     
     // MARK: - Functions
     func loadData() {
-        // TODO: Implement
+        state.accept(makeInitialState())
+    }
+    
+    private func makeInitialState() -> EventDetailViewState {
+        // TODO: Set fonts and colors
+        //TODO: Remove "Porto Alegre" mock data
+        let cupons = event.cupons.map({ String($0.discount) })
+        
+        return .init(imageURL: URL(string: event.image),
+                     name: NSAttributedString(string: event.title),
+                     peopleNumber: NSAttributedString(string: String(event.people.count)),
+                     price: NSAttributedString(string: String(event.price)),
+                     date: NSAttributedString(string: formatDate(event.date)),
+                     local: NSAttributedString(string: "Porto Alegre"),
+                     description: NSAttributedString(string: event.description),
+                     cuponsDiscount: cupons)
+    }
+    
+    private func formatDate(_ date: Date) -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "dd/MM/yy"
+        
+        return dateFormatterGet.string(from: date)
     }
 }

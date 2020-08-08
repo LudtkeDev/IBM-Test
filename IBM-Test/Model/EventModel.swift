@@ -10,7 +10,7 @@ import Foundation
 
 struct EventModel: Decodable {
     let id: String
-    let date: TimeInterval
+    let date: Date
     let description: String
     let image: String
     let longitude: Double

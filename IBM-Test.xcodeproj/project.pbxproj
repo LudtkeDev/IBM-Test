@@ -185,7 +185,6 @@
 		C770776124DCF0E0007C2A11 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C78A594824DE5D2900F8A823 /* Extensions */,
 				C7961B5624DE31AE00D6DAEE /* ErrorView */,
 				C770776524DCF609007C2A11 /* ServerAPIError */,
 				C770776224DCF0E9007C2A11 /* Endpoint */,
@@ -239,13 +238,6 @@
 				C78A593624DE401700F8A823 /* EventModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		C78A594824DE5D2900F8A823 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C7961B5624DE31AE00D6DAEE /* ErrorView */ = {
