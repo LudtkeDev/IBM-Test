@@ -15,15 +15,17 @@ final class EventDetailViewModel: EventDetailViewModelIO {
     private let event: EventModel
     private var state: BehaviorRelay<EventDetailViewState?> = .init(value: nil)
     private var addressState: PublishRelay<NSAttributedString> = .init()
+    private(set) var textToShare: String
     private(set) lazy var observableState = state.asObservable()
     private(set) lazy var observableAddress = addressState.asObservable()
     
     // MARK: - Lifecycle
     // Here we receive the model that we had already requested on the previous screen,
-    // avoiding an unnecessary loading
+    // avoiding an unnecessary loading and request
     init(service: EventDetailService, event: EventModel) {
         self.service = service
         self.event = event
+        self.textToShare = event.title
     }
     
     // MARK: - Functions

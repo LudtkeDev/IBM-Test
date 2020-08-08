@@ -45,7 +45,7 @@ final class EventDetailViewController: UIViewController {
         bind()
         setupLabels()
         setupImages()
-        setupGoButton()
+        setupButtons()
 
         DispatchQueue.global(qos: .utility).async { [weak self] in self?.viewModel.loadData() }
     }
@@ -66,8 +66,11 @@ final class EventDetailViewController: UIViewController {
         // TODO: Implement
     }
     
-    private func setupGoButton() {
-        // TODO: implement
+    private func setupButtons() {
+        let shareButton: UIBarButtonItem = .init(barButtonSystemItem: .action,
+                                                 target: self,
+                                                 action: #selector(shareEvent))
+        navigationItem.rightBarButtonItem = shareButton
     }
     
     // MARK: - Functions
@@ -86,5 +89,13 @@ final class EventDetailViewController: UIViewController {
     
     private func handleAddress(_ address: NSAttributedString) {
         locationLabel.attributedText = address
+    }
+}
+
+extension EventDetailViewController: EventDetailRouting {
+    @objc func shareEvent() {
+        let activityController = UIActivityViewController(activityItems: [viewModel.textToShare],
+                                                          applicationActivities: nil)
+        present(activityController, animated: true)
     }
 }

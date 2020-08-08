@@ -17,4 +17,9 @@ protocol EventDetailViewModelInput {
 protocol EventDetailViewModelOutput {
     var observableState: Observable<EventDetailViewState?> { get }
     var observableAddress: Observable<NSAttributedString> { get }
+    var textToShare: String { get }
+}
+
+protocol EventDetailRouting {
+    func shareEvent()
 }

@@ -100,7 +100,14 @@ extension EventListViewController: UITableViewDataSource {
 
 extension EventListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let eventDetailVC = EventDetailFactory.buildScreen(event: viewModel.events[indexPath.row])
+        navigateToEventDetail(event: viewModel.events[indexPath.row])
+    }
+}
+
+extension EventListViewController: EventListRouting {
+    func navigateToEventDetail(event: EventModel) {
+        let eventDetailVC = EventDetailFactory.buildScreen(event: event)
+        
         navigationController?.pushViewController(eventDetailVC, animated: true)
     }
 }

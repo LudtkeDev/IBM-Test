@@ -18,3 +18,7 @@ protocol EventListViewModelInput {
 protocol EventListViewModelOutput {
     var observableState: Observable<EventListViewState?> { get }
 }
+
+protocol EventListRouting {
+    func navigateToEventDetail(event: EventModel)
+}
