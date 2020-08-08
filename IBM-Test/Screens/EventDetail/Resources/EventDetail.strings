@@ -8,3 +8,4 @@
 
 "addressNotFound" = "Endereço não encontrado.";
 "formattedAddress" = "%@, %@";
+"discount" = "Cupom de R$: %@";

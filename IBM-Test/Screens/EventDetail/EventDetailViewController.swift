@@ -84,7 +84,11 @@ final class EventDetailViewController: UIViewController {
         dateLabel.attributedText = _state.date
         descriptionLabel.attributedText = _state.description
         
-        // TODO: Setup cupons stack view
+        _state.cuponsDiscount.forEach { discount in
+            guard let cuponView = R.nib.cuponView(owner: nil) else { return }
+            cuponView.setDiscount(discount)
+            cuponsStackView.addArrangedSubview(cuponView)
+        }
     }
     
     private func handleAddress(_ address: NSAttributedString) {

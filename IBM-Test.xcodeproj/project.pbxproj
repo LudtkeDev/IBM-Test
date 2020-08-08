@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A403A88BC73ACA4209C7BAF6 /* Pods_IBM_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D62511304D21CEECFD67F9E /* Pods_IBM_TestTests.framework */; };
 		C748CB2824DF3EA800559B95 /* EventDetail.strings in Resources */ = {isa = PBXBuildFile; fileRef = C748CB2724DF3EA800559B95 /* EventDetail.strings */; };
+		C748CB2C24DF5AB400559B95 /* CuponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C748CB2B24DF5AB400559B95 /* CuponView.swift */; };
+		C748CB2E24DF5B2200559B95 /* CuponView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C748CB2D24DF5B2100559B95 /* CuponView.xib */; };
 		C74B3F2F24DA545100B11AED /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F2D24DA545100B11AED /* EventListViewController.swift */; };
 		C74B3F3424DA547700B11AED /* EventListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F3324DA547700B11AED /* EventListService.swift */; };
 		C74B3F3624DA548B00B11AED /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F3524DA548B00B11AED /* EventListViewModel.swift */; };
@@ -58,6 +60,8 @@
 		90CED1551ACB98983B3934B5 /* Pods-IBM-TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBM-TestTests.release.xcconfig"; path = "Target Support Files/Pods-IBM-TestTests/Pods-IBM-TestTests.release.xcconfig"; sourceTree = "<group>"; };
 		BAA0705EF39BFE4ED47661F0 /* Pods_IBM_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBM_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C748CB2724DF3EA800559B95 /* EventDetail.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = EventDetail.strings; sourceTree = "<group>"; };
+		C748CB2B24DF5AB400559B95 /* CuponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuponView.swift; sourceTree = "<group>"; };
+		C748CB2D24DF5B2100559B95 /* CuponView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CuponView.xib; sourceTree = "<group>"; };
 		C74B3F2D24DA545100B11AED /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		C74B3F3324DA547700B11AED /* EventListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListService.swift; sourceTree = "<group>"; };
 		C74B3F3524DA548B00B11AED /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
@@ -140,6 +144,23 @@
 				C748CB2724DF3EA800559B95 /* EventDetail.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C748CB2924DF5A7D00559B95 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C748CB2A24DF5A9200559B95 /* CuponView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C748CB2A24DF5A9200559B95 /* CuponView */ = {
+			isa = PBXGroup;
+			children = (
+				C748CB2B24DF5AB400559B95 /* CuponView.swift */,
+				C748CB2D24DF5B2100559B95 /* CuponView.xib */,
+			);
+			path = CuponView;
 			sourceTree = "<group>";
 		};
 		C74B3F2B24DA542900B11AED /* Screens */ = {
@@ -238,6 +259,7 @@
 				C78A594024DE4B0700F8A823 /* EventDetailDefinitions.swift */,
 				C78A594424DE4BCA00F8A823 /* EventDetailFactory.swift */,
 				C78A594624DE4C2F00F8A823 /* EventDetailViewController.storyboard */,
+				C748CB2924DF5A7D00559B95 /* Components */,
 				C748CB2624DF3E8200559B95 /* Resources */,
 			);
 			path = EventDetail;
@@ -391,6 +413,7 @@
 			files = (
 				C74B3F3B24DA5B1F00B11AED /* EventTableViewCell.xib in Resources */,
 				C74B3F4224DA666C00B11AED /* EventListViewController.storyboard in Resources */,
+				C748CB2E24DF5B2200559B95 /* CuponView.xib in Resources */,
 				C74B3F3F24DA62E600B11AED /* EventList.strings in Resources */,
 				C7961B5A24DE329800D6DAEE /* General.strings in Resources */,
 				C7961B5C24DE345800D6DAEE /* ErrorView.xib in Resources */,
@@ -503,6 +526,7 @@
 				C7961B5524DE30E300D6DAEE /* R.generated.swift in Sources */,
 				C74B3F4424DA689900B11AED /* SceneDelegate.swift in Sources */,
 				C770775224DCD9A0007C2A11 /* EventListDefinitions.swift in Sources */,
+				C748CB2C24DF5AB400559B95 /* CuponView.swift in Sources */,
 				C7C0E31D24DA530100C34633 /* AppDelegate.swift in Sources */,
 				C78A593724DE401700F8A823 /* EventModel.swift in Sources */,
 				C78A593924DE42BE00F8A823 /* EventDetailViewModel.swift in Sources */,

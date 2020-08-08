@@ -114,26 +114,35 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3T-Yq-nF8" userLabel="Go Button">
-                                                        <rect key="frame" x="15" y="413.66666666666669" width="384" height="30"/>
+                                                        <rect key="frame" x="15" y="488.66666666666669" width="384" height="30.000000000000057"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30.000000000000057" id="H64-Yh-2TC"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                     </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="63a-69-pEb">
+                                                        <rect key="frame" x="15" y="413.66666666666669" width="384" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="X3c-wS-7Mi"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="TwV-w1-CXk" secondAttribute="trailing" constant="15" id="8gN-pw-Cms"/>
                                                     <constraint firstItem="eQj-K8-upH" firstAttribute="leading" secondItem="FDC-zk-92W" secondAttribute="leading" constant="15" id="BT3-Iz-Ysu"/>
-                                                    <constraint firstItem="N3T-Yq-nF8" firstAttribute="top" secondItem="r4U-Mi-gbW" secondAttribute="bottom" constant="15" id="CfX-Hw-fPn"/>
+                                                    <constraint firstItem="63a-69-pEb" firstAttribute="leading" secondItem="FDC-zk-92W" secondAttribute="leading" constant="15" id="CSO-Xq-QTp"/>
                                                     <constraint firstAttribute="trailing" secondItem="cxi-M6-J81" secondAttribute="trailing" constant="15" id="Ef0-I4-jiB"/>
                                                     <constraint firstItem="Aye-Gh-hbk" firstAttribute="top" secondItem="BQN-kg-oJB" secondAttribute="bottom" constant="15" id="N6y-PG-f9c"/>
                                                     <constraint firstItem="Zjz-Y2-xZf" firstAttribute="leading" secondItem="FDC-zk-92W" secondAttribute="leading" id="O0r-Ep-Nnh"/>
                                                     <constraint firstAttribute="trailing" secondItem="Aye-Gh-hbk" secondAttribute="trailing" constant="15" id="P1s-Ya-tYK"/>
+                                                    <constraint firstItem="63a-69-pEb" firstAttribute="top" secondItem="r4U-Mi-gbW" secondAttribute="bottom" constant="15" id="RKA-Xj-QyN"/>
                                                     <constraint firstItem="cxi-M6-J81" firstAttribute="leading" secondItem="eQj-K8-upH" secondAttribute="trailing" constant="15" id="T7h-5K-6or"/>
                                                     <constraint firstItem="Aye-Gh-hbk" firstAttribute="leading" secondItem="FDC-zk-92W" secondAttribute="leading" constant="15" id="TNo-6B-Lom"/>
+                                                    <constraint firstItem="N3T-Yq-nF8" firstAttribute="top" secondItem="63a-69-pEb" secondAttribute="bottom" constant="15" id="Tiq-t2-4ly"/>
                                                     <constraint firstItem="eQj-K8-upH" firstAttribute="top" secondItem="Aye-Gh-hbk" secondAttribute="bottom" constant="15" id="UVK-0Y-XCD"/>
                                                     <constraint firstAttribute="trailing" secondItem="r4U-Mi-gbW" secondAttribute="trailing" constant="15" id="UXK-uf-0Fc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="63a-69-pEb" secondAttribute="trailing" constant="15" id="WZH-ZD-H6Y"/>
                                                     <constraint firstAttribute="trailing" secondItem="Zjz-Y2-xZf" secondAttribute="trailing" id="c5T-8R-Dyj"/>
                                                     <constraint firstItem="TwV-w1-CXk" firstAttribute="leading" secondItem="FDC-zk-92W" secondAttribute="leading" constant="15" id="eVR-Py-6HO"/>
                                                     <constraint firstItem="cxi-M6-J81" firstAttribute="centerY" secondItem="eQj-K8-upH" secondAttribute="centerY" id="ep7-Ce-Bdf"/>
@@ -179,6 +188,7 @@
                         <viewLayoutGuide key="safeArea" id="wHF-id-IlR"/>
                     </view>
                     <connections>
+                        <outlet property="cuponsStackView" destination="63a-69-pEb" id="LBn-Yh-RvW"/>
                         <outlet property="dateLabel" destination="Aye-Gh-hbk" id="FHL-A2-CR3"/>
                         <outlet property="descriptionLabel" destination="r4U-Mi-gbW" id="xed-2U-rSa"/>
                         <outlet property="goButton" destination="N3T-Yq-nF8" id="R4a-DO-yu3"/>
