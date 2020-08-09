@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FZF-hm-5CG">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Event List View Controller-->
+        <scene sceneID="OQ0-DZ-tIa">
+            <objects>
+                <viewController storyboardIdentifier="EventListViewController" id="FZF-hm-5CG" customClass="EventListViewController" customModule="IBM_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KEH-WW-8PZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SxJ-2f-xRB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="t1d-b8-cdD">
+                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SxJ-2f-xRB" firstAttribute="trailing" secondItem="QvZ-cj-dFt" secondAttribute="trailing" id="IvS-Dc-wMR"/>
+                            <constraint firstItem="SxJ-2f-xRB" firstAttribute="bottom" secondItem="QvZ-cj-dFt" secondAttribute="bottom" id="SCX-5F-Yrs"/>
+                            <constraint firstItem="t1d-b8-cdD" firstAttribute="centerX" secondItem="KEH-WW-8PZ" secondAttribute="centerX" id="Tmv-nY-Ogy"/>
+                            <constraint firstItem="SxJ-2f-xRB" firstAttribute="leading" secondItem="QvZ-cj-dFt" secondAttribute="leading" id="iTt-Ag-9At"/>
+                            <constraint firstItem="t1d-b8-cdD" firstAttribute="centerY" secondItem="KEH-WW-8PZ" secondAttribute="centerY" id="rrB-74-TP4"/>
+                            <constraint firstItem="SxJ-2f-xRB" firstAttribute="top" secondItem="QvZ-cj-dFt" secondAttribute="top" id="v3T-Ux-GBw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QvZ-cj-dFt"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="t1d-b8-cdD" id="jqp-ST-nPN"/>
+                        <outlet property="tableView" destination="SxJ-2f-xRB" id="HTQ-Bq-pI1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcu-Jd-Bp4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="108"/>
+        </scene>
+    </scenes>
+</document>

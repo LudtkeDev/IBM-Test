@@ -1,0 +1,18 @@
+/* 
+  EventDetail.strings
+  IBM-Test
+
+  Created by Gustavo Ludtke on 08/08/20.
+  Copyright © 2020 IBM. All rights reserved.
+*/
+
+"addressNotFound" = "Endereço não encontrado.";
+"formattedAddress" = "%@, %@";
+"discount" = "cupom com desconto de R$ %@";
+"inputName" = "Insira seu nome:";
+"inputEmail" = "Insira seu e-mail:";
+"emailError" = "Email inválido";
+"checkInErrorMessage" = "Ocorreu um erro ao registrar o usuário. Por favor, tente novamente.";
+"checkInSuccessMessage" = "Usuário registrado com sucesso.";
+"price" = "R$ %@";
+"goEvent" = "EU VOU !";
