@@ -8,3 +8,6 @@
 
 "requestError" = "Ocorreu um erro ao carregar o conteúdo. Por favor, tente novamente.";
 "tryAgain" = "Tente novamente";
+"error" = "Erro";
+"success" = "Sucesso";
+"ok" = "OK";

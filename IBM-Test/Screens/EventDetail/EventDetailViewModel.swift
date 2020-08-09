@@ -13,11 +13,23 @@ final class EventDetailViewModel: EventDetailViewModelIO {
     // MARK: - Properties
     private let service: EventDetailService
     private let event: EventModel
-    private var state: BehaviorRelay<EventDetailViewState?> = .init(value: nil)
-    private var addressState: PublishRelay<NSAttributedString> = .init()
+    private var stateRelay: BehaviorRelay<EventDetailViewState?> = .init(value: nil)
+    private var addressStateRelay: PublishRelay<NSAttributedString> = .init()
+    private var emailErrorMessageRelay: PublishRelay<NSAttributedString?> = .init()
+    private var goButtonActivationRelay: BehaviorRelay<Bool> = .init(value: false)
+    private var userFeedbackRelay: PublishRelay<Bool> = .init()
     private(set) var textToShare: String
-    private(set) lazy var observableState = state.asObservable()
-    private(set) lazy var observableAddress = addressState.asObservable()
+    private(set) lazy var observableState = stateRelay.asObservable()
+    private(set) lazy var observableAddress = addressStateRelay.asObservable()
+    private(set) lazy var observableEmailError = emailErrorMessageRelay.asObservable()
+    private(set) lazy var observableGoButtonActivation = goButtonActivationRelay.asObservable()
+    private(set) lazy var observableUserFeedback = userFeedbackRelay.asObservable()
+    var nameText: String = "" {
+        didSet { activeRegisterButtonIfNedded() }
+    }
+    var emailText: String = "" {
+        didSet { activeRegisterButtonIfNedded() }
+    }
     
     // MARK: - Lifecycle
     // Here we receive the model that we had already requested on the previous screen,
@@ -30,12 +42,19 @@ final class EventDetailViewModel: EventDetailViewModelIO {
     
     // MARK: - Functions
     func loadData() {
-        state.accept(makeInitialState())
+        stateRelay.accept(makeInitialState())
+    }
+    
+    func registerUser() {
+        let errorMessage = emailText.isValidEmail ? nil : NSAttributedString(string: R.string.eventDetail.emailError())
+        emailErrorMessageRelay.accept(errorMessage)
+        
+        guard emailText.isValidEmail else { return }
+        service.checkIn(email: emailText, name: nameText, eventId: event.id, completion: handleCheckIn)
     }
     
     private func makeInitialState() -> EventDetailViewState {
         // TODO: Set fonts and colors
-        //TODO: Remove "Porto Alegre" mock data
         let cupons = event.cupons.map({ String($0.discount) })
         formatAddress(with: event.latitude, and: event.longitude)
         
@@ -46,6 +65,20 @@ final class EventDetailViewModel: EventDetailViewModelIO {
                      date: NSAttributedString(string: formatDate(event.date)),
                      description: NSAttributedString(string: event.description),
                      cuponsDiscount: cupons)
+    }
+    
+    private func activeRegisterButtonIfNedded() {
+        goButtonActivationRelay.accept(!nameText.isEmpty && !emailText.isEmpty)
+    }
+    
+    private func handleCheckIn(_ result: Swift.Result<Void, Error>) {
+        switch result {
+        case .success:
+            userFeedbackRelay.accept(true)
+        case .failure(let error):
+            userFeedbackRelay.accept(false)
+            print("Error to checkin - \(error)") // Send to crashlytics
+        }
     }
     
     // MARK: - Formatters
@@ -61,7 +94,7 @@ final class EventDetailViewModel: EventDetailViewModelIO {
         let errorString = R.string.eventDetail.addressNotFound()
         
         guard let lat = CLLocationDegrees(exactly: latitude), let lng = CLLocationDegrees(exactly: longitude) else {
-            addressState.accept(NSAttributedString(string: errorString))
+            addressStateRelay.accept(NSAttributedString(string: errorString))
             return
         }
         
@@ -69,7 +102,7 @@ final class EventDetailViewModel: EventDetailViewModelIO {
         
         geoCoder.reverseGeocodeLocation(location) { [weak self] (placemarks, error) in
             let address = NSAttributedString(string: processResponse(placemark: placemarks?.first, error: error))
-            self?.addressState.accept(address)
+            self?.addressStateRelay.accept(address)
         }
         
         func processResponse(placemark: CLPlacemark?, error: Error?) -> String {

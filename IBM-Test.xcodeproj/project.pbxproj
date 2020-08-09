@@ -19,6 +19,7 @@
 		C74B3F3F24DA62E600B11AED /* EventList.strings in Resources */ = {isa = PBXBuildFile; fileRef = C74B3F3E24DA62E600B11AED /* EventList.strings */; };
 		C74B3F4224DA666C00B11AED /* EventListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74B3F4124DA666C00B11AED /* EventListViewController.storyboard */; };
 		C74B3F4424DA689900B11AED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F4324DA689800B11AED /* SceneDelegate.swift */; };
+		C74F25FE24DF835B001EF028 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74F25FD24DF835B001EF028 /* StringExtension.swift */; };
 		C770775024DCCF92007C2A11 /* EventListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770774F24DCCF92007C2A11 /* EventListViewState.swift */; };
 		C770775224DCD9A0007C2A11 /* EventListDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770775124DCD9A0007C2A11 /* EventListDefinitions.swift */; };
 		C770775A24DCE54D007C2A11 /* EventListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770775924DCE54D007C2A11 /* EventListFactory.swift */; };
@@ -70,6 +71,7 @@
 		C74B3F3E24DA62E600B11AED /* EventList.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = EventList.strings; sourceTree = "<group>"; };
 		C74B3F4124DA666C00B11AED /* EventListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventListViewController.storyboard; sourceTree = "<group>"; };
 		C74B3F4324DA689800B11AED /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C74F25FD24DF835B001EF028 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C770774F24DCCF92007C2A11 /* EventListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewState.swift; sourceTree = "<group>"; };
 		C770775124DCD9A0007C2A11 /* EventListDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListDefinitions.swift; sourceTree = "<group>"; };
 		C770775924DCE54D007C2A11 /* EventListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListFactory.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		C74B3F3724DA582900B11AED /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C7961B5624DE31AE00D6DAEE /* ErrorView */,
 				C74B3F3D24DA62CA00B11AED /* EventTableViewCell */,
 			);
 			path = Components;
@@ -213,10 +216,18 @@
 			path = EventTableViewCell;
 			sourceTree = "<group>";
 		};
+		C74F25FC24DF834A001EF028 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C74F25FD24DF835B001EF028 /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C770776124DCF0E0007C2A11 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C7961B5624DE31AE00D6DAEE /* ErrorView */,
+				C74F25FC24DF834A001EF028 /* Extensions */,
 				C770776524DCF609007C2A11 /* ServerAPIError */,
 				C770776224DCF0E9007C2A11 /* Endpoint */,
 			);
@@ -542,6 +553,7 @@
 				C770776424DCF0F6007C2A11 /* Endpoint.swift in Sources */,
 				C78A593B24DE45B900F8A823 /* EventDetailViewController.swift in Sources */,
 				C78A594524DE4BCA00F8A823 /* EventDetailFactory.swift in Sources */,
+				C74F25FE24DF835B001EF028 /* StringExtension.swift in Sources */,
 				C770775A24DCE54D007C2A11 /* EventListFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
