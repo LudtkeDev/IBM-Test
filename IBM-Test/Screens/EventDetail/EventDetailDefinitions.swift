@@ -19,8 +19,8 @@ protocol EventDetailViewModelInput {
 
 protocol EventDetailViewModelOutput {
     var observableState: Observable<EventDetailViewState?> { get }
-    var observableAddress: Observable<NSAttributedString> { get }
-    var observableEmailError: Observable<NSAttributedString?> { get }
+    var observableAddress: Observable<String> { get }
+    var observableEmailError: Observable<String?> { get }
     var observableGoButtonActivation: Observable<Bool> { get }
     var observableUserFeedback: Observable<Bool> { get }
     var textToShare: String { get }

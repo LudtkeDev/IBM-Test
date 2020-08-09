@@ -9,13 +9,13 @@
 import RxRelay
 import CoreLocation
 
-final class EventDetailViewModel: EventDetailViewModelIO {
+class EventDetailViewModel: EventDetailViewModelIO {
     // MARK: - Properties
+    var addressStateRelay: BehaviorRelay<String> = .init(value: "")
     private let service: EventDetailService
     private let event: EventModel
     private var stateRelay: BehaviorRelay<EventDetailViewState?> = .init(value: nil)
-    private var addressStateRelay: PublishRelay<NSAttributedString> = .init()
-    private var emailErrorMessageRelay: PublishRelay<NSAttributedString?> = .init()
+    private var emailErrorMessageRelay: PublishRelay<String?> = .init()
     private var goButtonActivationRelay: BehaviorRelay<Bool> = .init(value: false)
     private var userFeedbackRelay: PublishRelay<Bool> = .init()
     private(set) var textToShare: String
@@ -46,7 +46,7 @@ final class EventDetailViewModel: EventDetailViewModelIO {
     }
     
     func registerUser() {
-        let errorMessage = emailText.isValidEmail ? nil : NSAttributedString(string: R.string.eventDetail.emailError())
+        let errorMessage = emailText.isValidEmail ? nil : R.string.eventDetail.emailError()
         emailErrorMessageRelay.accept(errorMessage)
         
         guard emailText.isValidEmail else { return }
@@ -81,26 +81,26 @@ final class EventDetailViewModel: EventDetailViewModelIO {
     }
     
     // MARK: - Formatters
-    private func formatDate(_ date: Date) -> String {
+    func formatDate(_ date: Date) -> String {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "dd/MM/yy"
         
         return dateFormatterGet.string(from: date)
     }
     
-    private func formatAddress(with latitude: Double, and longitude: Double) {
+    func formatAddress(with latitude: Double, and longitude: Double) {
         let geoCoder = CLGeocoder()
         let errorString = R.string.eventDetail.addressNotFound()
         
         guard let lat = CLLocationDegrees(exactly: latitude), let lng = CLLocationDegrees(exactly: longitude) else {
-            addressStateRelay.accept(NSAttributedString(string: errorString))
+            addressStateRelay.accept(errorString)
             return
         }
         
         let location = CLLocation(latitude: lat, longitude: lng)
         
         geoCoder.reverseGeocodeLocation(location) { [weak self] (placemarks, error) in
-            let address = NSAttributedString(string: processResponse(placemark: placemarks?.first, error: error))
+            let address = processResponse(placemark: placemarks?.first, error: error)
             self?.addressStateRelay.accept(address)
         }
         

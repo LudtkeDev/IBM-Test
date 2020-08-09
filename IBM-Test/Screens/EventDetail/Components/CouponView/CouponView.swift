@@ -29,7 +29,6 @@ final class CouponView: UIView {
     
     // MARK: - Functions
     func setDiscount(_ discount: String) {
-        // TODO: Set font and color
         label.font = R.font.louisGeorgeCafe(size: 18)!
         label.text = R.string.eventDetail.discount(discount)
     }
