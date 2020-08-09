@@ -19,7 +19,6 @@ final class EventDetailService {
         AF.request(Endpoint.checkIn.url, method: .post, parameters: parameters).responseJSON { response in
             switch response.result {
             case .success:
-                completion(.failure(ServerAPIError.undefined))
                 completion(.success(()))
             case .failure(let error):
                 completion(.failure(error))
