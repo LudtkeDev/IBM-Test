@@ -85,6 +85,7 @@ struct R: Rswift.Validatable {
   }
 
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
 
@@ -122,6 +123,132 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   #endif
+
+  /// This `R.file` struct is generated, and contains static references to 6 files.
+  struct file {
+    /// Resource file `LouisGeorgeCafe-Bold.ttf`.
+    static let louisGeorgeCafeBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe-Bold", pathExtension: "ttf")
+    /// Resource file `LouisGeorgeCafe-BoldItalic.ttf`.
+    static let louisGeorgeCafeBoldItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe-BoldItalic", pathExtension: "ttf")
+    /// Resource file `LouisGeorgeCafe-Italic.ttf`.
+    static let louisGeorgeCafeItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe-Italic", pathExtension: "ttf")
+    /// Resource file `LouisGeorgeCafe-Light.ttf`.
+    static let louisGeorgeCafeLightTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe-Light", pathExtension: "ttf")
+    /// Resource file `LouisGeorgeCafe-LightItalic.ttf`.
+    static let louisGeorgeCafeLightItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe-LightItalic", pathExtension: "ttf")
+    /// Resource file `LouisGeorgeCafe.ttf`.
+    static let louisGeorgeCafeTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe", pathExtension: "ttf")
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe", withExtension: "ttf")`
+    static func louisGeorgeCafeTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe-Bold", withExtension: "ttf")`
+    static func louisGeorgeCafeBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe-BoldItalic", withExtension: "ttf")`
+    static func louisGeorgeCafeBoldItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeBoldItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe-Italic", withExtension: "ttf")`
+    static func louisGeorgeCafeItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe-Light", withExtension: "ttf")`
+    static func louisGeorgeCafeLightTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeLightTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe-LightItalic", withExtension: "ttf")`
+    static func louisGeorgeCafeLightItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeLightItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.font` struct is generated, and contains static references to 6 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `LouisGeorgeCafe-BoldItalic`.
+    static let louisGeorgeCafeBoldItalic = Rswift.FontResource(fontName: "LouisGeorgeCafe-BoldItalic")
+    /// Font `LouisGeorgeCafe-Bold`.
+    static let louisGeorgeCafeBold = Rswift.FontResource(fontName: "LouisGeorgeCafe-Bold")
+    /// Font `LouisGeorgeCafe-Italic`.
+    static let louisGeorgeCafeItalic = Rswift.FontResource(fontName: "LouisGeorgeCafe-Italic")
+    /// Font `LouisGeorgeCafeLight-Italic`.
+    static let louisGeorgeCafeLightItalic = Rswift.FontResource(fontName: "LouisGeorgeCafeLight-Italic")
+    /// Font `LouisGeorgeCafeLight`.
+    static let louisGeorgeCafeLight = Rswift.FontResource(fontName: "LouisGeorgeCafeLight")
+    /// Font `LouisGeorgeCafe`.
+    static let louisGeorgeCafe = Rswift.FontResource(fontName: "LouisGeorgeCafe")
+
+    /// `UIFont(name: "LouisGeorgeCafe", size: ...)`
+    static func louisGeorgeCafe(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafe, size: size)
+    }
+
+    /// `UIFont(name: "LouisGeorgeCafe-Bold", size: ...)`
+    static func louisGeorgeCafeBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafeBold, size: size)
+    }
+
+    /// `UIFont(name: "LouisGeorgeCafe-BoldItalic", size: ...)`
+    static func louisGeorgeCafeBoldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafeBoldItalic, size: size)
+    }
+
+    /// `UIFont(name: "LouisGeorgeCafe-Italic", size: ...)`
+    static func louisGeorgeCafeItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafeItalic, size: size)
+    }
+
+    /// `UIFont(name: "LouisGeorgeCafeLight", size: ...)`
+    static func louisGeorgeCafeLight(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafeLight, size: size)
+    }
+
+    /// `UIFont(name: "LouisGeorgeCafeLight-Italic", size: ...)`
+    static func louisGeorgeCafeLightItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafeLightItalic, size: size)
+    }
+
+    static func validate() throws {
+      if R.font.louisGeorgeCafe(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafe' could not be loaded, is 'LouisGeorgeCafe.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.louisGeorgeCafeBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafe-Bold' could not be loaded, is 'LouisGeorgeCafe-Bold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.louisGeorgeCafeBoldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafe-BoldItalic' could not be loaded, is 'LouisGeorgeCafe-BoldItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.louisGeorgeCafeItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafe-Italic' could not be loaded, is 'LouisGeorgeCafe-Italic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.louisGeorgeCafeLight(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafeLight' could not be loaded, is 'LouisGeorgeCafe-Light.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.louisGeorgeCafeLightItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafeLight-Italic' could not be loaded, is 'LouisGeorgeCafe-LightItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.image` struct is generated, and contains static references to 1 images.
+  struct image {
+    /// Image `peopleIcon`.
+    static let peopleIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "peopleIcon")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "peopleIcon", bundle: ..., traitCollection: ...)`
+    static func peopleIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.peopleIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
 
   /// This `R.info` struct is generated, and contains static references to 1 properties.
   struct info {

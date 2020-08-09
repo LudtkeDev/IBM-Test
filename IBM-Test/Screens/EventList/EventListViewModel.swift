@@ -45,10 +45,9 @@ final class EventListViewModel: EventListViewModelIO {
     }
     
     private func mapEvent(_ event: EventModel) -> EventTableViewCell.State {
-        // TODO: Apply font and color
         return .init(id: event.id,
                      imageURL: URL(string: event.image),
-                     title: NSAttributedString(string: event.title),
-                     participants: NSAttributedString(string: String(event.people.count)))
+                     title: event.title,
+                     participants: String(event.people.count))
     }
 }

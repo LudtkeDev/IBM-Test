@@ -54,6 +54,15 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LouisGeorgeCafe.ttf</string>
+		<string>LouisGeorgeCafe-LightItalic.ttf</string>
+		<string>LouisGeorgeCafe-Light.ttf</string>
+		<string>LouisGeorgeCafe-Italic.ttf</string>
+		<string>LouisGeorgeCafe-BoldItalic.ttf</string>
+		<string>LouisGeorgeCafe-Bold.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

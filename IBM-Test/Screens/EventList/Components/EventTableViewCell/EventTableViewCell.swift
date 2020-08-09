@@ -45,18 +45,21 @@ final class EventTableViewCell: UITableViewCell {
         mainImageView.layer.cornerRadius = 10
         mainImageView.contentMode = .scaleAspectFill
         mainImageView.backgroundColor = .lightGray
+        participantsIcon.image = R.image.peopleIcon()
     }
     
     private func setupLabels() {
+        titleLabel.font = R.font.louisGeorgeCafeBold(size: 18)!
         titleLabel.numberOfLines = 0
         participantsLabel.numberOfLines = 1
+        participantsLabel.font = R.font.louisGeorgeCafe(size: 18)!
     }
     
     // MARK: - Functions
     func setState(_ state: State) {
         mainImageView.sd_setImage(with: state.imageURL)
-        titleLabel.attributedText = state.title
-        participantsLabel.attributedText = state.participants
+        titleLabel.text = state.title
+        participantsLabel.text = state.participants
     }
 }
 
@@ -64,8 +67,8 @@ extension EventTableViewCell {
     struct State: Equatable {
         let id: String
         let imageURL: URL?
-        let title: NSAttributedString
-        let participants: NSAttributedString
+        let title: String
+        let participants: String
         
         static func == (lhs: State, rhs: State) -> Bool {
             return lhs.imageURL == rhs.imageURL &&

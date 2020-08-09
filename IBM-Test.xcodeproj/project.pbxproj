@@ -20,6 +20,12 @@
 		C74B3F4224DA666C00B11AED /* EventListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74B3F4124DA666C00B11AED /* EventListViewController.storyboard */; };
 		C74B3F4424DA689900B11AED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F4324DA689800B11AED /* SceneDelegate.swift */; };
 		C74F25FE24DF835B001EF028 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74F25FD24DF835B001EF028 /* StringExtension.swift */; };
+		C74F261424DF9F28001EF028 /* LouisGeorgeCafe-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F260E24DF9F27001EF028 /* LouisGeorgeCafe-Light.ttf */; };
+		C74F261524DF9F28001EF028 /* LouisGeorgeCafe-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F260F24DF9F27001EF028 /* LouisGeorgeCafe-Bold.ttf */; };
+		C74F261624DF9F28001EF028 /* LouisGeorgeCafe-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261024DF9F28001EF028 /* LouisGeorgeCafe-LightItalic.ttf */; };
+		C74F261724DF9F28001EF028 /* LouisGeorgeCafe-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261124DF9F28001EF028 /* LouisGeorgeCafe-Italic.ttf */; };
+		C74F261824DF9F28001EF028 /* LouisGeorgeCafe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261224DF9F28001EF028 /* LouisGeorgeCafe.ttf */; };
+		C74F261924DF9F28001EF028 /* LouisGeorgeCafe-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261324DF9F28001EF028 /* LouisGeorgeCafe-BoldItalic.ttf */; };
 		C770775024DCCF92007C2A11 /* EventListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770774F24DCCF92007C2A11 /* EventListViewState.swift */; };
 		C770775224DCD9A0007C2A11 /* EventListDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770775124DCD9A0007C2A11 /* EventListDefinitions.swift */; };
 		C770775A24DCE54D007C2A11 /* EventListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770775924DCE54D007C2A11 /* EventListFactory.swift */; };
@@ -72,6 +78,12 @@
 		C74B3F4124DA666C00B11AED /* EventListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventListViewController.storyboard; sourceTree = "<group>"; };
 		C74B3F4324DA689800B11AED /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C74F25FD24DF835B001EF028 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C74F260E24DF9F27001EF028 /* LouisGeorgeCafe-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LouisGeorgeCafe-Light.ttf"; sourceTree = "<group>"; };
+		C74F260F24DF9F27001EF028 /* LouisGeorgeCafe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LouisGeorgeCafe-Bold.ttf"; sourceTree = "<group>"; };
+		C74F261024DF9F28001EF028 /* LouisGeorgeCafe-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LouisGeorgeCafe-LightItalic.ttf"; sourceTree = "<group>"; };
+		C74F261124DF9F28001EF028 /* LouisGeorgeCafe-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LouisGeorgeCafe-Italic.ttf"; sourceTree = "<group>"; };
+		C74F261224DF9F28001EF028 /* LouisGeorgeCafe.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LouisGeorgeCafe.ttf; sourceTree = "<group>"; };
+		C74F261324DF9F28001EF028 /* LouisGeorgeCafe-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LouisGeorgeCafe-BoldItalic.ttf"; sourceTree = "<group>"; };
 		C770774F24DCCF92007C2A11 /* EventListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewState.swift; sourceTree = "<group>"; };
 		C770775124DCD9A0007C2A11 /* EventListDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListDefinitions.swift; sourceTree = "<group>"; };
 		C770775924DCE54D007C2A11 /* EventListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListFactory.swift; sourceTree = "<group>"; };
@@ -224,6 +236,35 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C74F25FF24DF9CF9001EF028 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C74F260124DF9D1F001EF028 /* LouisGeorge */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C74F260024DF9D12001EF028 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				C7961B5924DE329800D6DAEE /* General.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		C74F260124DF9D1F001EF028 /* LouisGeorge */ = {
+			isa = PBXGroup;
+			children = (
+				C74F260F24DF9F27001EF028 /* LouisGeorgeCafe-Bold.ttf */,
+				C74F261324DF9F28001EF028 /* LouisGeorgeCafe-BoldItalic.ttf */,
+				C74F261124DF9F28001EF028 /* LouisGeorgeCafe-Italic.ttf */,
+				C74F260E24DF9F27001EF028 /* LouisGeorgeCafe-Light.ttf */,
+				C74F261024DF9F28001EF028 /* LouisGeorgeCafe-LightItalic.ttf */,
+				C74F261224DF9F28001EF028 /* LouisGeorgeCafe.ttf */,
+			);
+			path = LouisGeorge;
+			sourceTree = "<group>";
+		};
 		C770776124DCF0E0007C2A11 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,9 +294,10 @@
 		C775A54024DD81A9004D0E21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C74F260024DF9D12001EF028 /* Strings */,
+				C74F25FF24DF9CF9001EF028 /* Fonts */,
 				C7C0E32524DA530200C34633 /* Assets.xcassets */,
 				C7C0E32724DA530200C34633 /* LaunchScreen.storyboard */,
-				C7961B5924DE329800D6DAEE /* General.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -422,15 +464,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74F261624DF9F28001EF028 /* LouisGeorgeCafe-LightItalic.ttf in Resources */,
 				C74B3F3B24DA5B1F00B11AED /* EventTableViewCell.xib in Resources */,
+				C74F261924DF9F28001EF028 /* LouisGeorgeCafe-BoldItalic.ttf in Resources */,
 				C74B3F4224DA666C00B11AED /* EventListViewController.storyboard in Resources */,
 				C748CB2E24DF5B2200559B95 /* CuponView.xib in Resources */,
+				C74F261424DF9F28001EF028 /* LouisGeorgeCafe-Light.ttf in Resources */,
 				C74B3F3F24DA62E600B11AED /* EventList.strings in Resources */,
 				C7961B5A24DE329800D6DAEE /* General.strings in Resources */,
+				C74F261824DF9F28001EF028 /* LouisGeorgeCafe.ttf in Resources */,
+				C74F261724DF9F28001EF028 /* LouisGeorgeCafe-Italic.ttf in Resources */,
 				C7961B5C24DE345800D6DAEE /* ErrorView.xib in Resources */,
 				C748CB2824DF3EA800559B95 /* EventDetail.strings in Resources */,
 				C7C0E32924DA530200C34633 /* LaunchScreen.storyboard in Resources */,
 				C7C0E32624DA530200C34633 /* Assets.xcassets in Resources */,
+				C74F261524DF9F28001EF028 /* LouisGeorgeCafe-Bold.ttf in Resources */,
 				C78A594724DE4C2F00F8A823 /* EventDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
