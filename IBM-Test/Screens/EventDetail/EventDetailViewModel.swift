@@ -54,17 +54,16 @@ final class EventDetailViewModel: EventDetailViewModelIO {
     }
     
     private func makeInitialState() -> EventDetailViewState {
-        // TODO: Set fonts and colors
-        let cupons = event.cupons.map({ String($0.discount) })
+        let coupons = event.cupons.map({ String($0.discount) })
         formatAddress(with: event.latitude, and: event.longitude)
         
         return .init(imageURL: URL(string: event.image),
-                     name: NSAttributedString(string: event.title),
-                     peopleNumber: NSAttributedString(string: String(event.people.count)),
-                     price: NSAttributedString(string: String(event.price)),
-                     date: NSAttributedString(string: formatDate(event.date)),
-                     description: NSAttributedString(string: event.description),
-                     cuponsDiscount: cupons)
+                     name: event.title,
+                     peopleNumber: String(event.people.count),
+                     price: R.string.eventDetail.price(String(event.price)),
+                     date: formatDate(event.date),
+                     description: event.description,
+                     couponsDiscount: coupons)
     }
     
     private func activeRegisterButtonIfNedded() {

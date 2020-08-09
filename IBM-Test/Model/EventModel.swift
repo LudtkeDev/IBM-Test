@@ -18,7 +18,7 @@ struct EventModel: Decodable {
     let price: Double
     let title: String
     let people: [Person]
-    let cupons: [Cupon]
+    let cupons: [Coupon]
     
     struct Person: Decodable {
         let id: String
@@ -26,9 +26,9 @@ struct EventModel: Decodable {
         let picture: String
     }
     
-    struct Cupon: Decodable {
+    struct Coupon: Decodable {
         let id: String
         let eventId: String
-        let discount: Double
+        let discount: Int
     }
 }
