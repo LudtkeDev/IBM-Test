@@ -10,10 +10,10 @@ import Foundation
 
 struct EventDetailViewState: Equatable {
     let imageURL: URL?
-    let name: NSAttributedString
-    let peopleNumber: NSAttributedString
-    let price: NSAttributedString
-    let date: NSAttributedString
-    let description: NSAttributedString
-    let cuponsDiscount: [String]
+    let name: String
+    let peopleNumber: String
+    let price: String
+    let date: String
+    let description: String
+    let couponsDiscount: [String]
 }

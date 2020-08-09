@@ -54,6 +54,33 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Gontserrat-ThinItalic.ttf</string>
+		<string>Gontserrat-Thin.ttf</string>
+		<string>Gontserrat-SemiBoldItalic.ttf</string>
+		<string>Gontserrat-SemiBold.ttf</string>
+		<string>Gontserrat-Regular.ttf</string>
+		<string>Gontserrat-MediumItalic.ttf</string>
+		<string>Gontserrat-Medium.ttf</string>
+		<string>Gontserrat-LightItalic.ttf</string>
+		<string>Gontserrat-Light.ttf</string>
+		<string>Gontserrat-Italic.ttf</string>
+		<string>Gontserrat-ExtraLightItalic</string>
+		<string>Gontserrat-ExtraLight.ttf</string>
+		<string>Gontserrat-ExtraBoldItalic.ttf</string>
+		<string>Gontserrat-ExtraBold.ttf</string>
+		<string>Gontserrat-BoldItalic.ttf</string>
+		<string>Gontserrat-Bold.ttf</string>
+		<string>Gontserrat-BlackItalic.ttf</string>
+		<string>Gontserrat-Black.ttf</string>
+		<string>LouisGeorgeCafe.ttf</string>
+		<string>LouisGeorgeCafe-LightItalic.ttf</string>
+		<string>LouisGeorgeCafe-Light.ttf</string>
+		<string>LouisGeorgeCafe-Italic.ttf</string>
+		<string>LouisGeorgeCafe-BoldItalic.ttf</string>
+		<string>LouisGeorgeCafe-Bold.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

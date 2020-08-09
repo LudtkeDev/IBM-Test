@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		A403A88BC73ACA4209C7BAF6 /* Pods_IBM_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D62511304D21CEECFD67F9E /* Pods_IBM_TestTests.framework */; };
 		C748CB2824DF3EA800559B95 /* EventDetail.strings in Resources */ = {isa = PBXBuildFile; fileRef = C748CB2724DF3EA800559B95 /* EventDetail.strings */; };
-		C748CB2C24DF5AB400559B95 /* CuponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C748CB2B24DF5AB400559B95 /* CuponView.swift */; };
-		C748CB2E24DF5B2200559B95 /* CuponView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C748CB2D24DF5B2100559B95 /* CuponView.xib */; };
+		C748CB2C24DF5AB400559B95 /* CouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C748CB2B24DF5AB400559B95 /* CouponView.swift */; };
+		C748CB2E24DF5B2200559B95 /* CouponView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C748CB2D24DF5B2100559B95 /* CouponView.xib */; };
 		C74B3F2F24DA545100B11AED /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F2D24DA545100B11AED /* EventListViewController.swift */; };
 		C74B3F3424DA547700B11AED /* EventListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F3324DA547700B11AED /* EventListService.swift */; };
 		C74B3F3624DA548B00B11AED /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F3524DA548B00B11AED /* EventListViewModel.swift */; };
@@ -20,6 +20,30 @@
 		C74B3F4224DA666C00B11AED /* EventListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74B3F4124DA666C00B11AED /* EventListViewController.storyboard */; };
 		C74B3F4424DA689900B11AED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3F4324DA689800B11AED /* SceneDelegate.swift */; };
 		C74F25FE24DF835B001EF028 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74F25FD24DF835B001EF028 /* StringExtension.swift */; };
+		C74F261424DF9F28001EF028 /* LouisGeorgeCafe-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F260E24DF9F27001EF028 /* LouisGeorgeCafe-Light.ttf */; };
+		C74F261524DF9F28001EF028 /* LouisGeorgeCafe-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F260F24DF9F27001EF028 /* LouisGeorgeCafe-Bold.ttf */; };
+		C74F261624DF9F28001EF028 /* LouisGeorgeCafe-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261024DF9F28001EF028 /* LouisGeorgeCafe-LightItalic.ttf */; };
+		C74F261724DF9F28001EF028 /* LouisGeorgeCafe-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261124DF9F28001EF028 /* LouisGeorgeCafe-Italic.ttf */; };
+		C74F261824DF9F28001EF028 /* LouisGeorgeCafe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261224DF9F28001EF028 /* LouisGeorgeCafe.ttf */; };
+		C74F261924DF9F28001EF028 /* LouisGeorgeCafe-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261324DF9F28001EF028 /* LouisGeorgeCafe-BoldItalic.ttf */; };
+		C74F262D24DFA4A4001EF028 /* Gontserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261B24DFA4A3001EF028 /* Gontserrat-ExtraBold.ttf */; };
+		C74F262E24DFA4A4001EF028 /* Gontserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261C24DFA4A3001EF028 /* Gontserrat-ExtraLight.ttf */; };
+		C74F262F24DFA4A4001EF028 /* Gontserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261D24DFA4A3001EF028 /* Gontserrat-MediumItalic.ttf */; };
+		C74F263024DFA4A4001EF028 /* Gontserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261E24DFA4A3001EF028 /* Gontserrat-SemiBoldItalic.ttf */; };
+		C74F263124DFA4A4001EF028 /* Gontserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F261F24DFA4A3001EF028 /* Gontserrat-ExtraBoldItalic.ttf */; };
+		C74F263224DFA4A4001EF028 /* Gontserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262024DFA4A3001EF028 /* Gontserrat-Medium.ttf */; };
+		C74F263324DFA4A4001EF028 /* Gontserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262124DFA4A3001EF028 /* Gontserrat-BlackItalic.ttf */; };
+		C74F263424DFA4A4001EF028 /* Gontserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262224DFA4A3001EF028 /* Gontserrat-Light.ttf */; };
+		C74F263524DFA4A4001EF028 /* Gontserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262324DFA4A3001EF028 /* Gontserrat-Bold.ttf */; };
+		C74F263624DFA4A4001EF028 /* Gontserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262424DFA4A3001EF028 /* Gontserrat-BoldItalic.ttf */; };
+		C74F263724DFA4A4001EF028 /* Gontserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262524DFA4A3001EF028 /* Gontserrat-Black.ttf */; };
+		C74F263824DFA4A4001EF028 /* Gontserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262624DFA4A3001EF028 /* Gontserrat-ExtraLightItalic.ttf */; };
+		C74F263924DFA4A4001EF028 /* Gontserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262724DFA4A3001EF028 /* Gontserrat-SemiBold.ttf */; };
+		C74F263A24DFA4A4001EF028 /* Gontserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262824DFA4A3001EF028 /* Gontserrat-Thin.ttf */; };
+		C74F263B24DFA4A4001EF028 /* Gontserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262924DFA4A3001EF028 /* Gontserrat-LightItalic.ttf */; };
+		C74F263C24DFA4A4001EF028 /* Gontserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262A24DFA4A3001EF028 /* Gontserrat-Regular.ttf */; };
+		C74F263D24DFA4A4001EF028 /* Gontserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262B24DFA4A3001EF028 /* Gontserrat-ThinItalic.ttf */; };
+		C74F263E24DFA4A4001EF028 /* Gontserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74F262C24DFA4A3001EF028 /* Gontserrat-Italic.ttf */; };
 		C770775024DCCF92007C2A11 /* EventListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770774F24DCCF92007C2A11 /* EventListViewState.swift */; };
 		C770775224DCD9A0007C2A11 /* EventListDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770775124DCD9A0007C2A11 /* EventListDefinitions.swift */; };
 		C770775A24DCE54D007C2A11 /* EventListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770775924DCE54D007C2A11 /* EventListFactory.swift */; };
@@ -61,8 +85,8 @@
 		90CED1551ACB98983B3934B5 /* Pods-IBM-TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBM-TestTests.release.xcconfig"; path = "Target Support Files/Pods-IBM-TestTests/Pods-IBM-TestTests.release.xcconfig"; sourceTree = "<group>"; };
 		BAA0705EF39BFE4ED47661F0 /* Pods_IBM_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBM_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C748CB2724DF3EA800559B95 /* EventDetail.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = EventDetail.strings; sourceTree = "<group>"; };
-		C748CB2B24DF5AB400559B95 /* CuponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuponView.swift; sourceTree = "<group>"; };
-		C748CB2D24DF5B2100559B95 /* CuponView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CuponView.xib; sourceTree = "<group>"; };
+		C748CB2B24DF5AB400559B95 /* CouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponView.swift; sourceTree = "<group>"; };
+		C748CB2D24DF5B2100559B95 /* CouponView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponView.xib; sourceTree = "<group>"; };
 		C74B3F2D24DA545100B11AED /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		C74B3F3324DA547700B11AED /* EventListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListService.swift; sourceTree = "<group>"; };
 		C74B3F3524DA548B00B11AED /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
@@ -72,6 +96,30 @@
 		C74B3F4124DA666C00B11AED /* EventListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventListViewController.storyboard; sourceTree = "<group>"; };
 		C74B3F4324DA689800B11AED /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C74F25FD24DF835B001EF028 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C74F260E24DF9F27001EF028 /* LouisGeorgeCafe-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LouisGeorgeCafe-Light.ttf"; sourceTree = "<group>"; };
+		C74F260F24DF9F27001EF028 /* LouisGeorgeCafe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LouisGeorgeCafe-Bold.ttf"; sourceTree = "<group>"; };
+		C74F261024DF9F28001EF028 /* LouisGeorgeCafe-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LouisGeorgeCafe-LightItalic.ttf"; sourceTree = "<group>"; };
+		C74F261124DF9F28001EF028 /* LouisGeorgeCafe-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LouisGeorgeCafe-Italic.ttf"; sourceTree = "<group>"; };
+		C74F261224DF9F28001EF028 /* LouisGeorgeCafe.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LouisGeorgeCafe.ttf; sourceTree = "<group>"; };
+		C74F261324DF9F28001EF028 /* LouisGeorgeCafe-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LouisGeorgeCafe-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C74F261B24DFA4A3001EF028 /* Gontserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C74F261C24DFA4A3001EF028 /* Gontserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		C74F261D24DFA4A3001EF028 /* Gontserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		C74F261E24DFA4A3001EF028 /* Gontserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		C74F261F24DFA4A3001EF028 /* Gontserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		C74F262024DFA4A3001EF028 /* Gontserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-Medium.ttf"; sourceTree = "<group>"; };
+		C74F262124DFA4A3001EF028 /* Gontserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		C74F262224DFA4A3001EF028 /* Gontserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-Light.ttf"; sourceTree = "<group>"; };
+		C74F262324DFA4A3001EF028 /* Gontserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-Bold.ttf"; sourceTree = "<group>"; };
+		C74F262424DFA4A3001EF028 /* Gontserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C74F262524DFA4A3001EF028 /* Gontserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-Black.ttf"; sourceTree = "<group>"; };
+		C74F262624DFA4A3001EF028 /* Gontserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		C74F262724DFA4A3001EF028 /* Gontserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		C74F262824DFA4A3001EF028 /* Gontserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-Thin.ttf"; sourceTree = "<group>"; };
+		C74F262924DFA4A3001EF028 /* Gontserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		C74F262A24DFA4A3001EF028 /* Gontserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-Regular.ttf"; sourceTree = "<group>"; };
+		C74F262B24DFA4A3001EF028 /* Gontserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		C74F262C24DFA4A3001EF028 /* Gontserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gontserrat-Italic.ttf"; sourceTree = "<group>"; };
 		C770774F24DCCF92007C2A11 /* EventListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewState.swift; sourceTree = "<group>"; };
 		C770775124DCD9A0007C2A11 /* EventListDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListDefinitions.swift; sourceTree = "<group>"; };
 		C770775924DCE54D007C2A11 /* EventListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListFactory.swift; sourceTree = "<group>"; };
@@ -151,18 +199,18 @@
 		C748CB2924DF5A7D00559B95 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C748CB2A24DF5A9200559B95 /* CuponView */,
+				C748CB2A24DF5A9200559B95 /* CouponView */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		C748CB2A24DF5A9200559B95 /* CuponView */ = {
+		C748CB2A24DF5A9200559B95 /* CouponView */ = {
 			isa = PBXGroup;
 			children = (
-				C748CB2B24DF5AB400559B95 /* CuponView.swift */,
-				C748CB2D24DF5B2100559B95 /* CuponView.xib */,
+				C748CB2B24DF5AB400559B95 /* CouponView.swift */,
+				C748CB2D24DF5B2100559B95 /* CouponView.xib */,
 			);
-			path = CuponView;
+			path = CouponView;
 			sourceTree = "<group>";
 		};
 		C74B3F2B24DA542900B11AED /* Screens */ = {
@@ -224,6 +272,61 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C74F25FF24DF9CF9001EF028 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C74F261A24DFA3A3001EF028 /* Gontserrat */,
+				C74F260124DF9D1F001EF028 /* LouisGeorge */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C74F260024DF9D12001EF028 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				C7961B5924DE329800D6DAEE /* General.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		C74F260124DF9D1F001EF028 /* LouisGeorge */ = {
+			isa = PBXGroup;
+			children = (
+				C74F260F24DF9F27001EF028 /* LouisGeorgeCafe-Bold.ttf */,
+				C74F261324DF9F28001EF028 /* LouisGeorgeCafe-BoldItalic.ttf */,
+				C74F261124DF9F28001EF028 /* LouisGeorgeCafe-Italic.ttf */,
+				C74F260E24DF9F27001EF028 /* LouisGeorgeCafe-Light.ttf */,
+				C74F261024DF9F28001EF028 /* LouisGeorgeCafe-LightItalic.ttf */,
+				C74F261224DF9F28001EF028 /* LouisGeorgeCafe.ttf */,
+			);
+			path = LouisGeorge;
+			sourceTree = "<group>";
+		};
+		C74F261A24DFA3A3001EF028 /* Gontserrat */ = {
+			isa = PBXGroup;
+			children = (
+				C74F262524DFA4A3001EF028 /* Gontserrat-Black.ttf */,
+				C74F262124DFA4A3001EF028 /* Gontserrat-BlackItalic.ttf */,
+				C74F262324DFA4A3001EF028 /* Gontserrat-Bold.ttf */,
+				C74F262424DFA4A3001EF028 /* Gontserrat-BoldItalic.ttf */,
+				C74F261B24DFA4A3001EF028 /* Gontserrat-ExtraBold.ttf */,
+				C74F261F24DFA4A3001EF028 /* Gontserrat-ExtraBoldItalic.ttf */,
+				C74F261C24DFA4A3001EF028 /* Gontserrat-ExtraLight.ttf */,
+				C74F262624DFA4A3001EF028 /* Gontserrat-ExtraLightItalic.ttf */,
+				C74F262C24DFA4A3001EF028 /* Gontserrat-Italic.ttf */,
+				C74F262224DFA4A3001EF028 /* Gontserrat-Light.ttf */,
+				C74F262924DFA4A3001EF028 /* Gontserrat-LightItalic.ttf */,
+				C74F262024DFA4A3001EF028 /* Gontserrat-Medium.ttf */,
+				C74F261D24DFA4A3001EF028 /* Gontserrat-MediumItalic.ttf */,
+				C74F262A24DFA4A3001EF028 /* Gontserrat-Regular.ttf */,
+				C74F262724DFA4A3001EF028 /* Gontserrat-SemiBold.ttf */,
+				C74F261E24DFA4A3001EF028 /* Gontserrat-SemiBoldItalic.ttf */,
+				C74F262824DFA4A3001EF028 /* Gontserrat-Thin.ttf */,
+				C74F262B24DFA4A3001EF028 /* Gontserrat-ThinItalic.ttf */,
+			);
+			path = Gontserrat;
+			sourceTree = "<group>";
+		};
 		C770776124DCF0E0007C2A11 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,9 +356,10 @@
 		C775A54024DD81A9004D0E21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C74F260024DF9D12001EF028 /* Strings */,
+				C74F25FF24DF9CF9001EF028 /* Fonts */,
 				C7C0E32524DA530200C34633 /* Assets.xcassets */,
 				C7C0E32724DA530200C34633 /* LaunchScreen.storyboard */,
-				C7961B5924DE329800D6DAEE /* General.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -422,15 +526,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74F263B24DFA4A4001EF028 /* Gontserrat-LightItalic.ttf in Resources */,
+				C74F263124DFA4A4001EF028 /* Gontserrat-ExtraBoldItalic.ttf in Resources */,
+				C74F261624DF9F28001EF028 /* LouisGeorgeCafe-LightItalic.ttf in Resources */,
+				C74F263924DFA4A4001EF028 /* Gontserrat-SemiBold.ttf in Resources */,
+				C74F263724DFA4A4001EF028 /* Gontserrat-Black.ttf in Resources */,
 				C74B3F3B24DA5B1F00B11AED /* EventTableViewCell.xib in Resources */,
+				C74F263D24DFA4A4001EF028 /* Gontserrat-ThinItalic.ttf in Resources */,
+				C74F261924DF9F28001EF028 /* LouisGeorgeCafe-BoldItalic.ttf in Resources */,
+				C74F262E24DFA4A4001EF028 /* Gontserrat-ExtraLight.ttf in Resources */,
+				C74F262D24DFA4A4001EF028 /* Gontserrat-ExtraBold.ttf in Resources */,
+				C74F263524DFA4A4001EF028 /* Gontserrat-Bold.ttf in Resources */,
+				C74F263424DFA4A4001EF028 /* Gontserrat-Light.ttf in Resources */,
 				C74B3F4224DA666C00B11AED /* EventListViewController.storyboard in Resources */,
-				C748CB2E24DF5B2200559B95 /* CuponView.xib in Resources */,
+				C748CB2E24DF5B2200559B95 /* CouponView.xib in Resources */,
+				C74F263624DFA4A4001EF028 /* Gontserrat-BoldItalic.ttf in Resources */,
+				C74F262F24DFA4A4001EF028 /* Gontserrat-MediumItalic.ttf in Resources */,
+				C74F263024DFA4A4001EF028 /* Gontserrat-SemiBoldItalic.ttf in Resources */,
+				C74F261424DF9F28001EF028 /* LouisGeorgeCafe-Light.ttf in Resources */,
+				C74F263824DFA4A4001EF028 /* Gontserrat-ExtraLightItalic.ttf in Resources */,
+				C74F263E24DFA4A4001EF028 /* Gontserrat-Italic.ttf in Resources */,
 				C74B3F3F24DA62E600B11AED /* EventList.strings in Resources */,
 				C7961B5A24DE329800D6DAEE /* General.strings in Resources */,
+				C74F261824DF9F28001EF028 /* LouisGeorgeCafe.ttf in Resources */,
+				C74F261724DF9F28001EF028 /* LouisGeorgeCafe-Italic.ttf in Resources */,
 				C7961B5C24DE345800D6DAEE /* ErrorView.xib in Resources */,
 				C748CB2824DF3EA800559B95 /* EventDetail.strings in Resources */,
 				C7C0E32924DA530200C34633 /* LaunchScreen.storyboard in Resources */,
+				C74F263324DFA4A4001EF028 /* Gontserrat-BlackItalic.ttf in Resources */,
+				C74F263C24DFA4A4001EF028 /* Gontserrat-Regular.ttf in Resources */,
 				C7C0E32624DA530200C34633 /* Assets.xcassets in Resources */,
+				C74F263A24DFA4A4001EF028 /* Gontserrat-Thin.ttf in Resources */,
+				C74F261524DF9F28001EF028 /* LouisGeorgeCafe-Bold.ttf in Resources */,
+				C74F263224DFA4A4001EF028 /* Gontserrat-Medium.ttf in Resources */,
 				C78A594724DE4C2F00F8A823 /* EventDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,7 +665,7 @@
 				C7961B5524DE30E300D6DAEE /* R.generated.swift in Sources */,
 				C74B3F4424DA689900B11AED /* SceneDelegate.swift in Sources */,
 				C770775224DCD9A0007C2A11 /* EventListDefinitions.swift in Sources */,
-				C748CB2C24DF5AB400559B95 /* CuponView.swift in Sources */,
+				C748CB2C24DF5AB400559B95 /* CouponView.swift in Sources */,
 				C7C0E31D24DA530100C34633 /* AppDelegate.swift in Sources */,
 				C78A593724DE401700F8A823 /* EventModel.swift in Sources */,
 				C78A593924DE42BE00F8A823 /* EventDetailViewModel.swift in Sources */,

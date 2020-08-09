@@ -20,11 +20,12 @@ final class EventDetailViewController: UIViewController {
     @IBOutlet private weak var peopleLabel: UILabel!
     @IBOutlet private weak var priceIconImageView: UIImageView!
     @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var dateIconImageView: UIImageView!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var locationIconImageView: UIImageView!
     @IBOutlet private weak var locationLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var cuponsStackView: UIStackView!
+    @IBOutlet private weak var couponsStackView: UIStackView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var nameInputText: UITextField!
     @IBOutlet private weak var emailLabel: UILabel!
@@ -72,16 +73,36 @@ final class EventDetailViewController: UIViewController {
     }
     
     private func setupLabels() {
+        let regularFont = R.font.louisGeorgeCafe(size: 18)!
+        let boldFont = R.font.louisGeorgeCafeBold(size: 22)!
+        let descriptionFont = R.font.gontserratRegular(size: 15)!
+        let errorFont = R.font.gontserratRegular(size: 12)!
+        
+        titleLabel.font = boldFont
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
+        peopleLabel.font = regularFont
+        priceLabel.font = regularFont
+        dateLabel.font = regularFont
+        locationLabel.font = regularFont
         descriptionLabel.numberOfLines = 0
+        descriptionLabel.textAlignment = .justified
+        descriptionLabel.font = descriptionFont
         locationLabel.numberOfLines = 0
         nameLabel.attributedText = NSAttributedString(string: R.string.eventDetail.inputName())
+        nameLabel.font = descriptionFont
         emailLabel.attributedText = NSAttributedString(string: R.string.eventDetail.inputEmail())
+        emailLabel.font = descriptionFont
+        emailErrorLabel.font = errorFont
+        emailErrorLabel.textColor = .red
     }
     
     private func setupImages() {
-        // TODO: Implement
+        mainImageView.backgroundColor = .lightGray
+        peopleIconImageView.image = R.image.peopleIcon()
+        priceIconImageView.image = R.image.moneyIcon()
+        dateIconImageView.image = R.image.calendarIcon()
+        locationIconImageView.image = R.image.locationPinIcon()
     }
     
     private func setupButtons() {
@@ -91,6 +112,13 @@ final class EventDetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = shareButton
         
         goButton.addTarget(self, action: #selector(goButtonTapped), for: .touchUpInside)
+        goButton.layer.cornerRadius = 10
+        goButton.layer.borderWidth = 2
+        goButton.tintColor = .white
+        goButton.layer.borderColor = UIColor.systemGray3.cgColor
+        goButton.setAttributedTitle(NSAttributedString(string: R.string.eventDetail.goEvent(),
+                                                       attributes: [.font: R.font.louisGeorgeCafeBold(size: 15)!]),
+                                    for: .normal)
     }
     
     private func setupTextInputs() {
@@ -114,16 +142,16 @@ final class EventDetailViewController: UIViewController {
         guard let _state = state else { return }
         
         mainImageView.sd_setImage(with: _state.imageURL)
-        titleLabel.attributedText = _state.name
-        peopleLabel.attributedText = _state.peopleNumber
-        priceLabel.attributedText = _state.price
-        dateLabel.attributedText = _state.date
-        descriptionLabel.attributedText = _state.description
+        titleLabel.text = _state.name
+        peopleLabel.text = _state.peopleNumber
+        priceLabel.text = _state.price
+        dateLabel.text = _state.date
+        descriptionLabel.text = _state.description
         
-        _state.cuponsDiscount.forEach { discount in
-            guard let cuponView = R.nib.cuponView(owner: nil) else { return }
-            cuponView.setDiscount(discount)
-            cuponsStackView.addArrangedSubview(cuponView)
+        _state.couponsDiscount.forEach { discount in
+            guard let couponView = R.nib.couponView(owner: nil) else { return }
+            couponView.setDiscount(discount)
+            couponsStackView.addArrangedSubview(couponView)
         }
     }
     
@@ -136,15 +164,17 @@ final class EventDetailViewController: UIViewController {
     }
     
     private func handleGoButtonActivation(_ active: Bool) {
-        // TODO: Implement and remove this code
+        let backgroundColor: UIColor = active ? .systemRed : .systemGray
         
-        let buttonTitle = active ? "Ativo" : "Desativo"
-        goButton.setTitle(buttonTitle, for: .normal)
+        goButton.layer.backgroundColor = backgroundColor.cgColor
+        goButton.isUserInteractionEnabled = active
     }
     
     private func cleanTextFields() {
         nameInputText.text = nil
         emailInputText.text = nil
+        viewModel.emailText = ""
+        viewModel.nameText = ""
     }
     
     @objc private func goButtonTapped() {

@@ -1,5 +1,5 @@
 //
-//  CuponView.swift
+//  CouponView.swift
 //  IBM-Test
 //
 //  Created by Gustavo Ludtke on 08/08/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CuponView: UIView {
+final class CouponView: UIView {
     
     // MARK: - Components
     @IBOutlet private weak var imageView: UIImageView!
@@ -23,13 +23,14 @@ final class CuponView: UIView {
     
     // MARK: - Setup
     private func setup() {
-        // TODO: Implement
+        imageView.image = R.image.couponIcon()
         
     }
     
     // MARK: - Functions
     func setDiscount(_ discount: String) {
         // TODO: Set font and color
-        label.attributedText = NSAttributedString(string: R.string.eventDetail.discount(discount))
+        label.font = R.font.louisGeorgeCafe(size: 18)!
+        label.text = R.string.eventDetail.discount(discount)
     }
 }

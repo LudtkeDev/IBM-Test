@@ -85,6 +85,7 @@ struct R: Rswift.Validatable {
   }
 
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
 
@@ -123,6 +124,465 @@ struct R: Rswift.Validatable {
   }
   #endif
 
+  /// This `R.file` struct is generated, and contains static references to 24 files.
+  struct file {
+    /// Resource file `Gontserrat-Black.ttf`.
+    static let gontserratBlackTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-Black", pathExtension: "ttf")
+    /// Resource file `Gontserrat-BlackItalic.ttf`.
+    static let gontserratBlackItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-BlackItalic", pathExtension: "ttf")
+    /// Resource file `Gontserrat-Bold.ttf`.
+    static let gontserratBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-Bold", pathExtension: "ttf")
+    /// Resource file `Gontserrat-BoldItalic.ttf`.
+    static let gontserratBoldItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-BoldItalic", pathExtension: "ttf")
+    /// Resource file `Gontserrat-ExtraBold.ttf`.
+    static let gontserratExtraBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-ExtraBold", pathExtension: "ttf")
+    /// Resource file `Gontserrat-ExtraBoldItalic.ttf`.
+    static let gontserratExtraBoldItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-ExtraBoldItalic", pathExtension: "ttf")
+    /// Resource file `Gontserrat-ExtraLight.ttf`.
+    static let gontserratExtraLightTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-ExtraLight", pathExtension: "ttf")
+    /// Resource file `Gontserrat-ExtraLightItalic.ttf`.
+    static let gontserratExtraLightItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-ExtraLightItalic", pathExtension: "ttf")
+    /// Resource file `Gontserrat-Italic.ttf`.
+    static let gontserratItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-Italic", pathExtension: "ttf")
+    /// Resource file `Gontserrat-Light.ttf`.
+    static let gontserratLightTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-Light", pathExtension: "ttf")
+    /// Resource file `Gontserrat-LightItalic.ttf`.
+    static let gontserratLightItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-LightItalic", pathExtension: "ttf")
+    /// Resource file `Gontserrat-Medium.ttf`.
+    static let gontserratMediumTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-Medium", pathExtension: "ttf")
+    /// Resource file `Gontserrat-MediumItalic.ttf`.
+    static let gontserratMediumItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-MediumItalic", pathExtension: "ttf")
+    /// Resource file `Gontserrat-Regular.ttf`.
+    static let gontserratRegularTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-Regular", pathExtension: "ttf")
+    /// Resource file `Gontserrat-SemiBold.ttf`.
+    static let gontserratSemiBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-SemiBold", pathExtension: "ttf")
+    /// Resource file `Gontserrat-SemiBoldItalic.ttf`.
+    static let gontserratSemiBoldItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-SemiBoldItalic", pathExtension: "ttf")
+    /// Resource file `Gontserrat-Thin.ttf`.
+    static let gontserratThinTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-Thin", pathExtension: "ttf")
+    /// Resource file `Gontserrat-ThinItalic.ttf`.
+    static let gontserratThinItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gontserrat-ThinItalic", pathExtension: "ttf")
+    /// Resource file `LouisGeorgeCafe-Bold.ttf`.
+    static let louisGeorgeCafeBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe-Bold", pathExtension: "ttf")
+    /// Resource file `LouisGeorgeCafe-BoldItalic.ttf`.
+    static let louisGeorgeCafeBoldItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe-BoldItalic", pathExtension: "ttf")
+    /// Resource file `LouisGeorgeCafe-Italic.ttf`.
+    static let louisGeorgeCafeItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe-Italic", pathExtension: "ttf")
+    /// Resource file `LouisGeorgeCafe-Light.ttf`.
+    static let louisGeorgeCafeLightTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe-Light", pathExtension: "ttf")
+    /// Resource file `LouisGeorgeCafe-LightItalic.ttf`.
+    static let louisGeorgeCafeLightItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe-LightItalic", pathExtension: "ttf")
+    /// Resource file `LouisGeorgeCafe.ttf`.
+    static let louisGeorgeCafeTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "LouisGeorgeCafe", pathExtension: "ttf")
+
+    /// `bundle.url(forResource: "Gontserrat-Black", withExtension: "ttf")`
+    static func gontserratBlackTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratBlackTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-BlackItalic", withExtension: "ttf")`
+    static func gontserratBlackItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratBlackItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-Bold", withExtension: "ttf")`
+    static func gontserratBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-BoldItalic", withExtension: "ttf")`
+    static func gontserratBoldItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratBoldItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-ExtraBold", withExtension: "ttf")`
+    static func gontserratExtraBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratExtraBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-ExtraBoldItalic", withExtension: "ttf")`
+    static func gontserratExtraBoldItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratExtraBoldItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-ExtraLight", withExtension: "ttf")`
+    static func gontserratExtraLightTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratExtraLightTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-ExtraLightItalic", withExtension: "ttf")`
+    static func gontserratExtraLightItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratExtraLightItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-Italic", withExtension: "ttf")`
+    static func gontserratItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-Light", withExtension: "ttf")`
+    static func gontserratLightTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratLightTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-LightItalic", withExtension: "ttf")`
+    static func gontserratLightItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratLightItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-Medium", withExtension: "ttf")`
+    static func gontserratMediumTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratMediumTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-MediumItalic", withExtension: "ttf")`
+    static func gontserratMediumItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratMediumItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-Regular", withExtension: "ttf")`
+    static func gontserratRegularTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratRegularTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-SemiBold", withExtension: "ttf")`
+    static func gontserratSemiBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratSemiBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-SemiBoldItalic", withExtension: "ttf")`
+    static func gontserratSemiBoldItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratSemiBoldItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-Thin", withExtension: "ttf")`
+    static func gontserratThinTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratThinTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Gontserrat-ThinItalic", withExtension: "ttf")`
+    static func gontserratThinItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.gontserratThinItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe", withExtension: "ttf")`
+    static func louisGeorgeCafeTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe-Bold", withExtension: "ttf")`
+    static func louisGeorgeCafeBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe-BoldItalic", withExtension: "ttf")`
+    static func louisGeorgeCafeBoldItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeBoldItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe-Italic", withExtension: "ttf")`
+    static func louisGeorgeCafeItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe-Light", withExtension: "ttf")`
+    static func louisGeorgeCafeLightTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeLightTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "LouisGeorgeCafe-LightItalic", withExtension: "ttf")`
+    static func louisGeorgeCafeLightItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.louisGeorgeCafeLightItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.font` struct is generated, and contains static references to 24 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `Gontserrat-BlackItalic`.
+    static let gontserratBlackItalic = Rswift.FontResource(fontName: "Gontserrat-BlackItalic")
+    /// Font `Gontserrat-Black`.
+    static let gontserratBlack = Rswift.FontResource(fontName: "Gontserrat-Black")
+    /// Font `Gontserrat-BoldItalic`.
+    static let gontserratBoldItalic = Rswift.FontResource(fontName: "Gontserrat-BoldItalic")
+    /// Font `Gontserrat-Bold`.
+    static let gontserratBold = Rswift.FontResource(fontName: "Gontserrat-Bold")
+    /// Font `Gontserrat-ExtraBoldItalic`.
+    static let gontserratExtraBoldItalic = Rswift.FontResource(fontName: "Gontserrat-ExtraBoldItalic")
+    /// Font `Gontserrat-ExtraBold`.
+    static let gontserratExtraBold = Rswift.FontResource(fontName: "Gontserrat-ExtraBold")
+    /// Font `Gontserrat-ExtraLightItalic`.
+    static let gontserratExtraLightItalic = Rswift.FontResource(fontName: "Gontserrat-ExtraLightItalic")
+    /// Font `Gontserrat-ExtraLight`.
+    static let gontserratExtraLight = Rswift.FontResource(fontName: "Gontserrat-ExtraLight")
+    /// Font `Gontserrat-Italic`.
+    static let gontserratItalic = Rswift.FontResource(fontName: "Gontserrat-Italic")
+    /// Font `Gontserrat-LightItalic`.
+    static let gontserratLightItalic = Rswift.FontResource(fontName: "Gontserrat-LightItalic")
+    /// Font `Gontserrat-Light`.
+    static let gontserratLight = Rswift.FontResource(fontName: "Gontserrat-Light")
+    /// Font `Gontserrat-MediumItalic`.
+    static let gontserratMediumItalic = Rswift.FontResource(fontName: "Gontserrat-MediumItalic")
+    /// Font `Gontserrat-Medium`.
+    static let gontserratMedium = Rswift.FontResource(fontName: "Gontserrat-Medium")
+    /// Font `Gontserrat-Regular`.
+    static let gontserratRegular = Rswift.FontResource(fontName: "Gontserrat-Regular")
+    /// Font `Gontserrat-SemiBoldItalic`.
+    static let gontserratSemiBoldItalic = Rswift.FontResource(fontName: "Gontserrat-SemiBoldItalic")
+    /// Font `Gontserrat-SemiBold`.
+    static let gontserratSemiBold = Rswift.FontResource(fontName: "Gontserrat-SemiBold")
+    /// Font `Gontserrat-ThinItalic`.
+    static let gontserratThinItalic = Rswift.FontResource(fontName: "Gontserrat-ThinItalic")
+    /// Font `Gontserrat-Thin`.
+    static let gontserratThin = Rswift.FontResource(fontName: "Gontserrat-Thin")
+    /// Font `LouisGeorgeCafe-BoldItalic`.
+    static let louisGeorgeCafeBoldItalic = Rswift.FontResource(fontName: "LouisGeorgeCafe-BoldItalic")
+    /// Font `LouisGeorgeCafe-Bold`.
+    static let louisGeorgeCafeBold = Rswift.FontResource(fontName: "LouisGeorgeCafe-Bold")
+    /// Font `LouisGeorgeCafe-Italic`.
+    static let louisGeorgeCafeItalic = Rswift.FontResource(fontName: "LouisGeorgeCafe-Italic")
+    /// Font `LouisGeorgeCafeLight-Italic`.
+    static let louisGeorgeCafeLightItalic = Rswift.FontResource(fontName: "LouisGeorgeCafeLight-Italic")
+    /// Font `LouisGeorgeCafeLight`.
+    static let louisGeorgeCafeLight = Rswift.FontResource(fontName: "LouisGeorgeCafeLight")
+    /// Font `LouisGeorgeCafe`.
+    static let louisGeorgeCafe = Rswift.FontResource(fontName: "LouisGeorgeCafe")
+
+    /// `UIFont(name: "Gontserrat-Black", size: ...)`
+    static func gontserratBlack(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratBlack, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-BlackItalic", size: ...)`
+    static func gontserratBlackItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratBlackItalic, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-Bold", size: ...)`
+    static func gontserratBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratBold, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-BoldItalic", size: ...)`
+    static func gontserratBoldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratBoldItalic, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-ExtraBold", size: ...)`
+    static func gontserratExtraBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratExtraBold, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-ExtraBoldItalic", size: ...)`
+    static func gontserratExtraBoldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratExtraBoldItalic, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-ExtraLight", size: ...)`
+    static func gontserratExtraLight(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratExtraLight, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-ExtraLightItalic", size: ...)`
+    static func gontserratExtraLightItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratExtraLightItalic, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-Italic", size: ...)`
+    static func gontserratItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratItalic, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-Light", size: ...)`
+    static func gontserratLight(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratLight, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-LightItalic", size: ...)`
+    static func gontserratLightItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratLightItalic, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-Medium", size: ...)`
+    static func gontserratMedium(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratMedium, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-MediumItalic", size: ...)`
+    static func gontserratMediumItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratMediumItalic, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-Regular", size: ...)`
+    static func gontserratRegular(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratRegular, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-SemiBold", size: ...)`
+    static func gontserratSemiBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratSemiBold, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-SemiBoldItalic", size: ...)`
+    static func gontserratSemiBoldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratSemiBoldItalic, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-Thin", size: ...)`
+    static func gontserratThin(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratThin, size: size)
+    }
+
+    /// `UIFont(name: "Gontserrat-ThinItalic", size: ...)`
+    static func gontserratThinItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: gontserratThinItalic, size: size)
+    }
+
+    /// `UIFont(name: "LouisGeorgeCafe", size: ...)`
+    static func louisGeorgeCafe(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafe, size: size)
+    }
+
+    /// `UIFont(name: "LouisGeorgeCafe-Bold", size: ...)`
+    static func louisGeorgeCafeBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafeBold, size: size)
+    }
+
+    /// `UIFont(name: "LouisGeorgeCafe-BoldItalic", size: ...)`
+    static func louisGeorgeCafeBoldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafeBoldItalic, size: size)
+    }
+
+    /// `UIFont(name: "LouisGeorgeCafe-Italic", size: ...)`
+    static func louisGeorgeCafeItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafeItalic, size: size)
+    }
+
+    /// `UIFont(name: "LouisGeorgeCafeLight", size: ...)`
+    static func louisGeorgeCafeLight(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafeLight, size: size)
+    }
+
+    /// `UIFont(name: "LouisGeorgeCafeLight-Italic", size: ...)`
+    static func louisGeorgeCafeLightItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: louisGeorgeCafeLightItalic, size: size)
+    }
+
+    static func validate() throws {
+      if R.font.gontserratBlack(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-Black' could not be loaded, is 'Gontserrat-Black.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratBlackItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-BlackItalic' could not be loaded, is 'Gontserrat-BlackItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-Bold' could not be loaded, is 'Gontserrat-Bold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratBoldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-BoldItalic' could not be loaded, is 'Gontserrat-BoldItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratExtraBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-ExtraBold' could not be loaded, is 'Gontserrat-ExtraBold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratExtraBoldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-ExtraBoldItalic' could not be loaded, is 'Gontserrat-ExtraBoldItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratExtraLight(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-ExtraLight' could not be loaded, is 'Gontserrat-ExtraLight.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratExtraLightItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-ExtraLightItalic' could not be loaded, is 'Gontserrat-ExtraLightItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-Italic' could not be loaded, is 'Gontserrat-Italic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratLight(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-Light' could not be loaded, is 'Gontserrat-Light.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratLightItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-LightItalic' could not be loaded, is 'Gontserrat-LightItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratMedium(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-Medium' could not be loaded, is 'Gontserrat-Medium.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratMediumItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-MediumItalic' could not be loaded, is 'Gontserrat-MediumItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratRegular(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-Regular' could not be loaded, is 'Gontserrat-Regular.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratSemiBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-SemiBold' could not be loaded, is 'Gontserrat-SemiBold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratSemiBoldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-SemiBoldItalic' could not be loaded, is 'Gontserrat-SemiBoldItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratThin(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-Thin' could not be loaded, is 'Gontserrat-Thin.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.gontserratThinItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Gontserrat-ThinItalic' could not be loaded, is 'Gontserrat-ThinItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.louisGeorgeCafe(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafe' could not be loaded, is 'LouisGeorgeCafe.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.louisGeorgeCafeBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafe-Bold' could not be loaded, is 'LouisGeorgeCafe-Bold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.louisGeorgeCafeBoldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafe-BoldItalic' could not be loaded, is 'LouisGeorgeCafe-BoldItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.louisGeorgeCafeItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafe-Italic' could not be loaded, is 'LouisGeorgeCafe-Italic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.louisGeorgeCafeLight(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafeLight' could not be loaded, is 'LouisGeorgeCafe-Light.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.louisGeorgeCafeLightItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'LouisGeorgeCafeLight-Italic' could not be loaded, is 'LouisGeorgeCafe-LightItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.image` struct is generated, and contains static references to 6 images.
+  struct image {
+    /// Image `IBMLogo`.
+    static let ibmLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "IBMLogo")
+    /// Image `calendarIcon`.
+    static let calendarIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "calendarIcon")
+    /// Image `couponIcon`.
+    static let couponIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "couponIcon")
+    /// Image `locationPinIcon`.
+    static let locationPinIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "locationPinIcon")
+    /// Image `moneyIcon`.
+    static let moneyIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "moneyIcon")
+    /// Image `peopleIcon`.
+    static let peopleIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "peopleIcon")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "IBMLogo", bundle: ..., traitCollection: ...)`
+    static func ibmLogo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ibmLogo, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "calendarIcon", bundle: ..., traitCollection: ...)`
+    static func calendarIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.calendarIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "couponIcon", bundle: ..., traitCollection: ...)`
+    static func couponIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.couponIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "locationPinIcon", bundle: ..., traitCollection: ...)`
+    static func locationPinIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.locationPinIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "moneyIcon", bundle: ..., traitCollection: ...)`
+    static func moneyIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.moneyIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "peopleIcon", bundle: ..., traitCollection: ...)`
+    static func peopleIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.peopleIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
   /// This `R.info` struct is generated, and contains static references to 1 properties.
   struct info {
     struct uiApplicationSceneManifest {
@@ -155,18 +615,18 @@ struct R: Rswift.Validatable {
 
   /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
-    /// Nib `CuponView`.
-    static let cuponView = _R.nib._CuponView()
+    /// Nib `CouponView`.
+    static let couponView = _R.nib._CouponView()
     /// Nib `ErrorView`.
     static let errorView = _R.nib._ErrorView()
     /// Nib `EventTableViewCell`.
     static let eventTableViewCell = _R.nib._EventTableViewCell()
 
     #if os(iOS) || os(tvOS)
-    /// `UINib(name: "CuponView", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.cuponView) instead")
-    static func cuponView(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.cuponView)
+    /// `UINib(name: "CouponView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.couponView) instead")
+    static func couponView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.couponView)
     }
     #endif
 
@@ -186,8 +646,8 @@ struct R: Rswift.Validatable {
     }
     #endif
 
-    static func cuponView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CuponView? {
-      return R.nib.cuponView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CuponView
+    static func couponView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CouponView? {
+      return R.nib.couponView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CouponView
     }
 
     static func errorView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ErrorView? {
@@ -211,12 +671,12 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
-    /// This `R.string.eventDetail` struct is generated, and contains static references to 8 localization keys.
+    /// This `R.string.eventDetail` struct is generated, and contains static references to 10 localization keys.
     struct eventDetail {
       /// Value: %@, %@
       static let formattedAddress = Rswift.StringResource(key: "formattedAddress", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Cupom de R$: %@
-      static let discount = Rswift.StringResource(key: "discount", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: EU VOU !
+      static let goEvent = Rswift.StringResource(key: "goEvent", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Email inválido
       static let emailError = Rswift.StringResource(key: "emailError", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Endereço não encontrado.
@@ -227,8 +687,12 @@ struct R: Rswift.Validatable {
       static let inputName = Rswift.StringResource(key: "inputName", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Ocorreu um erro ao registrar o usuário. Por favor, tente novamente.
       static let checkInErrorMessage = Rswift.StringResource(key: "checkInErrorMessage", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: R$ %@
+      static let price = Rswift.StringResource(key: "price", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Usuário registrado com sucesso.
       static let checkInSuccessMessage = Rswift.StringResource(key: "checkInSuccessMessage", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: cupom com desconto de R$ %@
+      static let discount = Rswift.StringResource(key: "discount", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
 
       /// Value: %@, %@
       static func formattedAddress(_ value1: String, _ value2: String, preferredLanguages: [String]? = nil) -> String {
@@ -245,19 +709,17 @@ struct R: Rswift.Validatable {
         return String(format: format, locale: locale, value1, value2)
       }
 
-      /// Value: Cupom de R$: %@
-      static func discount(_ value1: String, preferredLanguages: [String]? = nil) -> String {
+      /// Value: EU VOU !
+      static func goEvent(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          let format = NSLocalizedString("discount", tableName: "EventDetail", bundle: hostingBundle, comment: "")
-          return String(format: format, locale: applicationLocale, value1)
+          return NSLocalizedString("goEvent", tableName: "EventDetail", bundle: hostingBundle, comment: "")
         }
 
-        guard let (locale, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
-          return "discount"
+        guard let (_, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "goEvent"
         }
 
-        let format = NSLocalizedString("discount", tableName: "EventDetail", bundle: bundle, comment: "")
-        return String(format: format, locale: locale, value1)
+        return NSLocalizedString("goEvent", tableName: "EventDetail", bundle: bundle, comment: "")
       }
 
       /// Value: Email inválido
@@ -325,6 +787,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("checkInErrorMessage", tableName: "EventDetail", bundle: bundle, comment: "")
       }
 
+      /// Value: R$ %@
+      static func price(_ value1: String, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("price", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "price"
+        }
+
+        let format = NSLocalizedString("price", tableName: "EventDetail", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1)
+      }
+
       /// Value: Usuário registrado com sucesso.
       static func checkInSuccessMessage(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -336,6 +813,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("checkInSuccessMessage", tableName: "EventDetail", bundle: bundle, comment: "")
+      }
+
+      /// Value: cupom com desconto de R$ %@
+      static func discount(_ value1: String, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("discount", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "discount"
+        }
+
+        let format = NSLocalizedString("discount", tableName: "EventDetail", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1)
       }
 
       fileprivate init() {}
@@ -468,12 +960,12 @@ struct _R: Rswift.Validatable {
 
   #if os(iOS) || os(tvOS)
   struct nib {
-    struct _CuponView: Rswift.NibResourceType {
+    struct _CouponView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
-      let name = "CuponView"
+      let name = "CouponView"
 
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CuponView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CuponView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CouponView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CouponView
       }
 
       fileprivate init() {}
@@ -572,6 +1064,7 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
 
       static func validate() throws {
+        if UIKit.UIImage(named: "IBMLogo", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'IBMLogo' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
