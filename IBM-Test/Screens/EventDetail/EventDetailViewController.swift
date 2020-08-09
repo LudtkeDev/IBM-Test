@@ -165,7 +165,9 @@ final class EventDetailViewController: UIViewController {
     
     private func handleGoButtonActivation(_ active: Bool) {
         let backgroundColor: UIColor = active ? .systemRed : .systemGray
+        
         goButton.layer.backgroundColor = backgroundColor.cgColor
+        goButton.isUserInteractionEnabled = active
     }
     
     private func cleanTextFields() {
