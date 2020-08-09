@@ -211,14 +211,24 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
-    /// This `R.string.eventDetail` struct is generated, and contains static references to 3 localization keys.
+    /// This `R.string.eventDetail` struct is generated, and contains static references to 8 localization keys.
     struct eventDetail {
       /// Value: %@, %@
       static let formattedAddress = Rswift.StringResource(key: "formattedAddress", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Cupom de R$: %@
       static let discount = Rswift.StringResource(key: "discount", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Email inválido
+      static let emailError = Rswift.StringResource(key: "emailError", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Endereço não encontrado.
       static let addressNotFound = Rswift.StringResource(key: "addressNotFound", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Insira seu e-mail:
+      static let inputEmail = Rswift.StringResource(key: "inputEmail", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Insira seu nome:
+      static let inputName = Rswift.StringResource(key: "inputName", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Ocorreu um erro ao registrar o usuário. Por favor, tente novamente.
+      static let checkInErrorMessage = Rswift.StringResource(key: "checkInErrorMessage", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Usuário registrado com sucesso.
+      static let checkInSuccessMessage = Rswift.StringResource(key: "checkInSuccessMessage", tableName: "EventDetail", bundle: R.hostingBundle, locales: [], comment: nil)
 
       /// Value: %@, %@
       static func formattedAddress(_ value1: String, _ value2: String, preferredLanguages: [String]? = nil) -> String {
@@ -250,6 +260,19 @@ struct R: Rswift.Validatable {
         return String(format: format, locale: locale, value1)
       }
 
+      /// Value: Email inválido
+      static func emailError(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("emailError", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "emailError"
+        }
+
+        return NSLocalizedString("emailError", tableName: "EventDetail", bundle: bundle, comment: "")
+      }
+
       /// Value: Endereço não encontrado.
       static func addressNotFound(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -261,6 +284,58 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("addressNotFound", tableName: "EventDetail", bundle: bundle, comment: "")
+      }
+
+      /// Value: Insira seu e-mail:
+      static func inputEmail(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("inputEmail", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "inputEmail"
+        }
+
+        return NSLocalizedString("inputEmail", tableName: "EventDetail", bundle: bundle, comment: "")
+      }
+
+      /// Value: Insira seu nome:
+      static func inputName(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("inputName", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "inputName"
+        }
+
+        return NSLocalizedString("inputName", tableName: "EventDetail", bundle: bundle, comment: "")
+      }
+
+      /// Value: Ocorreu um erro ao registrar o usuário. Por favor, tente novamente.
+      static func checkInErrorMessage(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("checkInErrorMessage", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "checkInErrorMessage"
+        }
+
+        return NSLocalizedString("checkInErrorMessage", tableName: "EventDetail", bundle: bundle, comment: "")
+      }
+
+      /// Value: Usuário registrado com sucesso.
+      static func checkInSuccessMessage(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("checkInSuccessMessage", tableName: "EventDetail", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "EventDetail", preferredLanguages: preferredLanguages) else {
+          return "checkInSuccessMessage"
+        }
+
+        return NSLocalizedString("checkInSuccessMessage", tableName: "EventDetail", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}
@@ -287,12 +362,44 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    /// This `R.string.general` struct is generated, and contains static references to 2 localization keys.
+    /// This `R.string.general` struct is generated, and contains static references to 5 localization keys.
     struct general {
+      /// Value: Erro
+      static let error = Rswift.StringResource(key: "error", tableName: "General", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: OK
+      static let ok = Rswift.StringResource(key: "ok", tableName: "General", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Ocorreu um erro ao carregar o conteúdo. Por favor, tente novamente.
       static let requestError = Rswift.StringResource(key: "requestError", tableName: "General", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Sucesso
+      static let success = Rswift.StringResource(key: "success", tableName: "General", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Tente novamente
       static let tryAgain = Rswift.StringResource(key: "tryAgain", tableName: "General", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Erro
+      static func error(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error", tableName: "General", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "General", preferredLanguages: preferredLanguages) else {
+          return "error"
+        }
+
+        return NSLocalizedString("error", tableName: "General", bundle: bundle, comment: "")
+      }
+
+      /// Value: OK
+      static func ok(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("ok", tableName: "General", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "General", preferredLanguages: preferredLanguages) else {
+          return "ok"
+        }
+
+        return NSLocalizedString("ok", tableName: "General", bundle: bundle, comment: "")
+      }
 
       /// Value: Ocorreu um erro ao carregar o conteúdo. Por favor, tente novamente.
       static func requestError(preferredLanguages: [String]? = nil) -> String {
@@ -305,6 +412,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("requestError", tableName: "General", bundle: bundle, comment: "")
+      }
+
+      /// Value: Sucesso
+      static func success(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("success", tableName: "General", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "General", preferredLanguages: preferredLanguages) else {
+          return "success"
+        }
+
+        return NSLocalizedString("success", tableName: "General", bundle: bundle, comment: "")
       }
 
       /// Value: Tente novamente

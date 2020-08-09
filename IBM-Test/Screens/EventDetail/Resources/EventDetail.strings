@@ -9,3 +9,8 @@
 "addressNotFound" = "Endereço não encontrado.";
 "formattedAddress" = "%@, %@";
 "discount" = "Cupom de R$: %@";
+"inputName" = "Insira seu nome:";
+"inputEmail" = "Insira seu e-mail:";
+"emailError" = "Email inválido";
+"checkInErrorMessage" = "Ocorreu um erro ao registrar o usuário. Por favor, tente novamente.";
+"checkInSuccessMessage" = "Usuário registrado com sucesso.";
