@@ -155,12 +155,12 @@ final class EventDetailViewController: UIViewController {
         }
     }
     
-    private func handleAddress(_ address: NSAttributedString) {
-        locationLabel.attributedText = address
+    private func handleAddress(_ address: String) {
+        locationLabel.text = address
     }
     
-    private func handleEmailError(_ errorMessage: NSAttributedString?) {
-        emailErrorLabel.attributedText = errorMessage
+    private func handleEmailError(_ errorMessage: String?) {
+        emailErrorLabel.text = errorMessage
     }
     
     private func handleGoButtonActivation(_ active: Bool) {

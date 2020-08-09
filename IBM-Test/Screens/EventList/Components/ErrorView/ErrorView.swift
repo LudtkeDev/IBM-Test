@@ -25,7 +25,6 @@ final class ErrorView: UIView {
     
     // MARK: - Setup
     private func setup() {
-        // TODO: Set Fonts and colors
         errorLabel.numberOfLines = 0
         errorLabel.textAlignment = .center
         errorLabel.attributedText = NSAttributedString(string: R.string.general.requestError())
